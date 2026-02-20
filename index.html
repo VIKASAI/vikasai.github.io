@@ -3,156 +3,469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vikash Kumar Dubey — Senior AI/ML Engineer at Sanofi. Healthcare AI, Clinical ML, Medical Imaging, NLP.">
+    <meta name="description" content="Vikash Kumar Dubey — Senior AI/ML Modeler Engineer at Sanofi. Healthcare AI, Clinical AI/ML, Medical Imaging, NLP.">
     <meta property="og:title" content="Vikash Kumar Dubey — Senior AI/ML Engineer">
-    <meta property="og:description" content="Senior AI/ML Engineer at Sanofi · 6+ years · 6 published papers · Healthcare AI, Medical Imaging, Clinical ML">
+    <meta property="og:description" content="Senior AI/ML Modeler Engineer at Sanofi. 6 published papers. Healthcare AI, Medical Imaging, Clinical ML.">
+    <meta property="og:type" content="website">
     <title>Vikash Kumar Dubey — Senior AI/ML Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root{--serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--mono:'IBM Plex Mono',monospace;--ink:#111;--body:#3a3a3a;--caption:#808080;--rule:#d4d4d4;--rule-light:#ebebeb;--accent:#1a56db;--accent-dim:rgba(26,86,219,0.06);--paper:#fff;--off-white:#f7f7f5}
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}body{font-family:var(--sans);color:var(--body);font-size:14.5px;line-height:1.72;background:var(--paper);-webkit-font-smoothing:antialiased}::selection{background:var(--accent-dim);color:var(--ink)}a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--ink)}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+        body {
+            font-family: 'Inter', 'Trebuchet MS', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #1772d0; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #f09228; }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            background: #ffffff;
+            min-height: calc(100vh - 50px);
+            box-shadow: 0 0 40px rgba(0,0,0,0.04);
+        }
 
-    .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}.nav-inner{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:15px 28px}.nav-brand{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.3px;cursor:pointer}.nav-brand:hover{color:var(--accent)}.nav-menu{display:flex;gap:2px;align-items:center}.nav-menu a{font-size:12.5px;font-weight:500;color:var(--caption);padding:6px 14px;letter-spacing:.4px;text-transform:uppercase;border-radius:3px;transition:all .2s}.nav-menu a:hover{color:var(--ink);background:var(--off-white)}.nav-toggle{display:none;background:none;border:none;width:28px;height:20px;cursor:pointer;position:relative}.nav-toggle span,.nav-toggle::before,.nav-toggle::after{position:absolute;left:0;width:100%;height:1.5px;background:var(--ink);transition:all .3s}.nav-toggle::before{content:'';top:0}.nav-toggle span{top:50%;transform:translateY(-50%)}.nav-toggle::after{content:'';bottom:0}
+        /* Section titles */
+        .section { margin-bottom: 38px; padding: 0 20px; }
+        .section-title {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            padding-bottom: 8px;
+            border-bottom: 2.5px solid #1772d0;
+            margin-bottom: 18px;
+            display: inline-block;
+        }
 
-    .page{max-width:780px;margin:0 auto;padding:0 28px}
+        /* Experience cards - logo top-right */
+        .exp-card {
+            position: relative;
+            padding: 18px 140px 18px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+        .exp-card:hover { background: #fafbfc; border-radius: 6px; }
+        .exp-card:last-child { border-bottom: none; }
+        .exp-content { width: 100%; }
+        .exp-logo {
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fafbfc;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .exp-logo img { max-width: 100px; max-height: 45px; object-fit: contain; }
+        .exp-company { font-weight: 700; color: #1a1a1a; font-size: 16px; }
+        .exp-role { font-weight: 600; color: #444; font-size: 14px; }
+        .exp-location { font-size: 13px; color: #888; font-style: italic; }
+        .exp-desc { margin-top: 6px; color: #444; font-size: 14.5px; line-height: 1.65; }
+        .tech-tag { font-size: 13px; color: #666; margin-top: 8px; }
+        .tech-tag b { color: #555; }
 
-    .hero{padding:56px 0 44px;display:grid;grid-template-columns:1fr 190px;gap:40px;align-items:start}.hero-overline{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px}.hero h1{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--ink);line-height:1.12;letter-spacing:-1px;margin-bottom:10px}.hero-title{font-size:16px;font-weight:500;color:var(--body);margin-bottom:24px}.hero-title span{color:var(--caption);font-weight:400}.hero-summary{color:var(--body);font-size:14.5px;line-height:1.78}.hero-summary p{margin-bottom:14px}.hero-summary strong{color:var(--ink);font-weight:600}.hero-contact{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:22px;border-top:1px solid var(--rule-light)}.hero-contact a{font-size:12px;font-weight:500;color:var(--caption);padding:5px 13px;border:1px solid var(--rule);border-radius:4px;transition:all .2s;letter-spacing:.3px}.hero-contact a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim)}.hero-aside{text-align:center}.hero-photo{width:100%;border-radius:14px;filter:grayscale(8%);transition:filter .4s,transform .4s}.hero-photo:hover{filter:grayscale(0%);transform:scale(1.015)}.hero-meta{margin-top:16px;font-family:var(--mono);font-size:11px;color:var(--caption);line-height:1.8}.hero-meta a{color:var(--caption)}.hero-meta a:hover{color:var(--accent)}
+        /* Publications */
+        .pub-item { margin-bottom: 16px; padding-left: 28px; position: relative; line-height: 1.6; }
+        .pub-num { position: absolute; left: 0; top: 0; font-weight: 700; color: #1772d0; font-size: 15px; }
+        .pub-title { font-weight: 600; color: #1a1a1a; line-height: 1.5; }
+        .pub-venue { font-style: italic; color: #666; font-size: 13.5px; }
+        .pub-link { font-size: 13px; font-weight: 500; }
 
-    .fold{border-top:1px solid var(--rule)}.fold-head{display:flex;align-items:center;justify-content:space-between;padding:22px 0;cursor:pointer;user-select:none}.fold-head:hover .fold-label{color:var(--ink)}.fold-label{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--body);letter-spacing:-.3px;transition:color .2s}.fold-arrow{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .4s cubic-bezier(.4,0,.2,1)}.fold-arrow svg{width:16px;height:16px;stroke:var(--caption);stroke-width:2;fill:none;transition:stroke .2s}.fold.open .fold-arrow{transform:rotate(180deg)}.fold.open .fold-arrow svg{stroke:var(--accent)}.fold-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .55s cubic-bezier(.4,0,.2,1),opacity .45s ease,padding .45s ease;padding-bottom:0}.fold.open .fold-body{max-height:6000px;opacity:1;padding-bottom:40px}
+        /* Projects */
+        .proj-item { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #f5f5f5; }
+        .proj-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .proj-header { font-weight: 600; color: #1a1a1a; font-size: 15px; }
+        .proj-meta { font-style: italic; color: #888; font-size: 13px; }
+        .proj-desc { color: #444; font-size: 14.5px; margin-top: 5px; line-height: 1.6; }
 
-    .role{display:grid;grid-template-columns:68px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--rule-light);align-items:start}.role:last-child{border-bottom:none}.role-logo{width:68px;height:42px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .2s}.role:hover .role-logo{border-color:var(--accent)}.role-logo img{max-width:54px;max-height:32px;object-fit:contain}.role-org{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);line-height:1.2}.role-position{font-size:13.5px;font-weight:600;color:var(--accent);margin-top:1px}.role-when{font-family:var(--mono);font-size:11px;color:var(--caption);margin-top:3px}.role-bullets{margin-top:12px;padding-left:16px}.role-bullets li{color:var(--body);font-size:14px;line-height:1.72;margin-bottom:7px}.role-bullets li::marker{color:var(--rule)}.role-core{margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--caption);line-height:1.7}.role-core b{color:var(--body);font-weight:500}
+        /* Certifications */
+        .cert-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .cert-item:last-child { border-bottom: none; }
 
-    .project{padding:22px 0;border-bottom:1px solid var(--rule-light)}.project:last-child{border-bottom:none}.project-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.project-name{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}.project-year{font-family:var(--mono);font-size:11px;color:var(--caption);flex-shrink:0}.project-bullets{margin-top:10px;padding-left:16px}.project-bullets li{color:var(--body);font-size:14px;line-height:1.72;margin-bottom:6px}.project-bullets li::marker{color:var(--rule)}
+        /* Skills table */
+        .skills-table { width: 100%; border-collapse: collapse; margin-top: 12px; border: 1px solid #e0e0e0; }
+        .skills-table thead th {
+            padding: 10px 14px; text-align: left; background: #1e293b;
+            color: #fff; font-size: 13px; font-weight: 600; border: 1px solid #334155;
+        }
+        .skills-table td { padding: 9px 14px; border: 1px solid #e5e7eb; font-size: 14px; }
+        .skills-table tr:nth-child(odd) { background: #fafbfc; }
+        .skills-table tr:nth-child(even) { background: #fff; }
+        .cat-label { font-weight: 600; font-size: 13px; white-space: nowrap; }
 
-    .pub{padding:14px 0;border-bottom:1px solid var(--rule-light);display:grid;grid-template-columns:24px 1fr;gap:12px}.pub:last-child{border-bottom:none}.pub-idx{font-family:var(--mono);font-size:12px;color:var(--caption);padding-top:3px}.pub-title{font-weight:600;font-size:14.5px;color:var(--ink);line-height:1.5}.pub-title a{color:var(--ink)}.pub-title a:hover{color:var(--accent)}.pub-venue{font-size:13px;color:var(--caption);font-style:italic;margin-top:1px}.pub-link{font-family:var(--mono);font-size:11.5px;margin-top:2px;display:inline-block}
+        /* Closing & footer */
+        .closing { text-align: center; padding: 28px 20px; border-top: 1px solid #e0e0e0; margin-top: 12px; }
+        .closing p { font-size: 15px; color: #444; line-height: 1.8; }
+        .closing a { margin: 0 6px; }
+        .footer { text-align: center; padding: 16px; font-size: 12px; color: #ccc; }
+        .back-top { display: block; text-align: center; margin-top: 8px; font-size: 13px; color: #aaa; }
+        .back-top:hover { color: #1772d0; }
 
-    .edu{display:grid;grid-template-columns:58px 1fr;gap:18px;padding:20px 0;align-items:start}.edu-icon{width:58px;height:58px;background:var(--paper);border:1px solid var(--rule);border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}.edu-icon img{max-width:42px;max-height:42px;object-fit:contain}.edu-name{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}.edu-degree{font-size:13.5px;color:var(--accent);font-weight:500}.edu-when{font-family:var(--mono);font-size:11px;color:var(--caption);margin-top:2px}.edu-body{font-size:13.5px;color:var(--body);margin-top:8px;line-height:1.65}.edu-body strong{color:var(--ink)}.certs-divider{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule-light)}.certs-title{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:16px}.cert-entry{padding:12px 0;border-bottom:1px solid var(--rule-light);font-size:14px;color:var(--body);line-height:1.65}.cert-entry:last-child{border-bottom:none}.cert-entry strong{color:var(--ink);font-weight:600}
+        /* Mobile */
+        @media (max-width: 680px) {
+            .bio-row { flex-direction: column; }
+            .bio-photo { width: 150px !important; margin: 0 auto 16px; }
+            .exp-card { padding-right: 0; padding-top: 70px; }
+            .exp-logo { top: 8px; right: 0; width: 100px; height: 50px; }
+            .section { padding: 0 10px; }
+        }
 
-    .skills-grid{display:flex;flex-direction:column;gap:0}.skill-row{display:grid;grid-template-columns:115px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule-light);align-items:baseline}.skill-row:last-child{border-bottom:none}.skill-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--caption);font-weight:500}.skill-values{font-size:14px;color:var(--body);line-height:1.65}
+        /* Navigation bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0;
+            width: 100%;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 40px;
+        }
+        .nav-name {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #1a1a1a;
+            letter-spacing: -0.3px;
+        }
+        .nav-name:hover { color: #1772d0; }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+        .nav-links a {
+            padding: 6px 16px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: #444;
+            border-radius: 20px;
+            transition: all 0.25s;
+            border: 1px solid #ddd;
+            background: #fafafa;
+            cursor: pointer;
+        }
+        .nav-links a:hover {
+            background: #1772d0;
+            color: #fff;
+            border-color: #1772d0;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(23,114,208,0.25);
+        }
+        .hamburger { display: none; cursor: pointer; font-size: 22px; color: #333; background: none; border: none; }
 
-    .contact-inner{text-align:center;padding:8px 0}.contact-inner p{font-size:15.5px;color:var(--body);line-height:1.75;max-width:480px;margin:0 auto 24px}.contact-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}.contact-btn{padding:10px 24px;font-size:13px;font-weight:600;letter-spacing:.3px;border:1px solid var(--rule);border-radius:6px;color:var(--body);transition:all .25s}.contact-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}.contact-btn.filled{background:var(--ink);color:var(--paper);border-color:var(--ink)}.contact-btn.filled:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
-
-    .footer{text-align:center;padding:36px 0;font-size:12px;color:var(--rule);border-top:1px solid var(--rule-light);margin-top:16px;font-family:var(--mono);letter-spacing:.5px}
-
-    @media(max-width:640px){.hero{grid-template-columns:1fr;gap:28px;padding-top:36px}.hero-aside{order:-1;display:flex;flex-direction:column;align-items:center}.hero-photo{width:150px}.hero h1{font-size:34px;text-align:center}.hero-title,.hero-overline{text-align:center}.hero-contact{justify-content:center}.role{grid-template-columns:1fr}.role-logo{width:56px;height:34px}.role-logo img{max-width:44px;max-height:28px}.edu{grid-template-columns:1fr}.edu-icon{width:48px;height:48px}.skill-row{grid-template-columns:1fr;gap:4px}.pub{grid-template-columns:20px 1fr}.nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:12px 20px;gap:0}.nav-menu.open{display:flex}.nav-menu a{padding:10px 14px;font-size:13px}.nav-toggle{display:block}.fold-label{font-size:22px}.project-head{flex-direction:column;gap:2px}}
-</style>
-
+        @media (max-width: 680px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                border-bottom: 1px solid #eee;
+                padding: 10px 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { border-color: #eee; background: #fff; }
+            .nav-links a { padding: 10px 14px; font-size: 14px; }
+            .hamburger { display: block; }
+        }
+    </style>
 </head>
 <body>
 
-<nav class="nav"><div class="nav-inner">
-    <a class="nav-brand" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})" href="#">Vikash Kumar Dubey</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('open')" aria-label="Menu"><span></span></button>
-    <div class="nav-menu">
-        <a href="#" onclick="openFold('experience',event)">Experience</a>
-        <a href="#" onclick="openFold('projects',event)">Projects</a>
-        <a href="#" onclick="openFold('publications',event)">Research</a>
-        <a href="#" onclick="openFold('education',event)">Education</a>
-        <a href="#" onclick="openFold('skills',event)">Skills</a>
-        <a href="#" onclick="openFold('contact',event)">Contact</a>
-    </div>
-</div></nav>
 
-<div class="page"
-<section class="hero">
-    <div>
-        <div class="hero-overline">Senior AI/ML Engineer</div>
-        <h1>Vikash Kumar Dubey</h1>
-        <div class="hero-title">AI/ML Modeler Engineer at <a href="https://www.sanofi.com/" target="_blank">Sanofi</a> <span>· Hyderabad, India</span></div>
-        <div class="hero-summary">
-            <p>Senior AI/ML Engineer with 6+ years of experience building machine learning models and data pipelines across pharmaceutical drug development, clinical research, and bioinformatics. Hands-on expertise in disease progression modeling, patient stratification, medical imaging diagnostics, and clinical trial analytics using multimodal data (EHR, imaging, genomics).</p>
-            <p>Strong foundation in CDISC-aligned data standards (SDTM/ADaM), regulated environments, and close collaboration with Biostatistics, Clinical Development, and R&D teams. Published researcher with <strong>6 peer-reviewed papers</strong> at IEEE and APASL conferences.</p>
-        </div>
-        <div class="hero-contact">
-            <a href="mailto:dubeyvikashkr@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/VIKASAI" target="_blank">GitHub</a>
-            <a href="https://vikasai.github.io" target="_blank">Portfolio</a>
-            <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank">ResearchGate</a>
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="#top" class="nav-name">Vikash</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Research</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
-    <div class="hero-aside">
-        <img class="hero-photo" alt="Vikash Kumar Dubey" src="images/vikash.jpg">
-        <div class="hero-meta">+91-9818962342<br><a href="mailto:dubeyvikashkr@gmail.com">dubeyvikashkr@gmail.com</a></div>
-    </div>
-</section>
+</nav>
 
-<!-- EXPERIENCE -->
-<div class="fold" id="experience"><div class="fold-head" onclick="toggle(this)"><span class="fold-label">Experience</span><span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></div><div class="fold-body">
-    <div class="role"><div class="role-logo"><a href="https://www.sanofi.com/" target="_blank"><img src="images/sanofi.png" alt="Sanofi"></a></div><div><div class="role-org">Sanofi</div><div class="role-position">Senior AI/ML Modeler Engineer</div><div class="role-when">May 2025 – Present · Hyderabad, India</div><ul class="role-bullets"><li>Building and validating survival and longitudinal models to analyze disease progression across multimodal clinical datasets (cognitive endpoints, MRI/PET neuroimaging, genomic biomarkers) for neuroscience drug programs.</li><li>Developing CDISC-compliant modeling pipelines (SDTM/ADaM) with automated data validation checks, consistency rules, and documentation to support reproducibility and regulatory traceability.</li><li>Collaborating closely with Biostatistics and Clinical Development teams to translate clinical questions into model specifications, ensuring outputs are interpretable and clinically actionable.</li><li>Evaluating models using discrimination, calibration, subgroup robustness, and clinical utility metrics to ensure outputs are meaningful for trial design and regulatory evidence packages.</li></ul><div class="role-core"><b>Core:</b> Survival Analysis, Longitudinal Modeling, SDTM/ADaM, Multimodal Clinical Data, Model Validation</div></div></div>
-    <div class="role"><div class="role-logo"><a href="https://www.cognizant.com/" target="_blank"><img src="images/cognizant.png" alt="Cognizant"></a></div><div><div class="role-org">Cognizant</div><div class="role-position">Data Scientist – Healthcare</div><div class="role-when">Jul 2021 – May 2025 · Hyderabad, India</div><ul class="role-bullets"><li>Built patient stratification and trial recruitment models for pharma clients using ensemble methods (XGBoost, LightGBM), with cross-validated evaluation and bias checks across diverse clinical cohorts.</li><li>Developed and maintained end-to-end ML pipelines on AWS and Azure — data ingestion, feature engineering, model training, and serving — supporting multiple concurrent life sciences projects.</li><li>Integrated generative AI into clinical workflows for document automation and diagnostic support; set up model versioning, monitoring, and retraining processes as part of MLOps practice.</li><li>Created Tableau and Power BI dashboards that clinical and operations teams used daily for trial enrollment tracking, site performance, and real-time decision-making.</li><li>Owned data quality across clinical pipelines — wrote validation rules, tracked data lineage, and maintained feature documentation for EHR, lab, and imaging datasets within Agile sprints.</li><li>Mentored junior data scientists on clinical data handling, model evaluation best practices, and documentation standards across healthcare engagements.</li></ul><div class="role-core"><b>Core:</b> Ensemble Modeling, Cloud ML Pipelines, Clinical Data Quality, Dashboard Analytics, MLOps</div></div></div>
-    <div class="role"><div class="role-logo"><a href="https://www.ilbs.in/" target="_blank"><img src="images/ilbs.png" alt="ILBS"></a></div><div><div class="role-org">Institute of Liver & Biliary Sciences</div><div class="role-position">Data Scientist – Medical AI Research</div><div class="role-when">Dec 2020 – Jul 2021 · Delhi, India</div><ul class="role-bullets"><li>Built and validated clinical prediction models (XGBoost, Random Forest) for sepsis risk in ACLF patients, including feature importance analysis and threshold tuning for clinical decision support; published in APASL 2023.</li><li>Implemented U-Net and CNN models for brain tumor segmentation from MRI scans, evaluated using dice coefficient, cross-fold validation, and comparison against radiologist-annotated ground truth; presented at IEEE ICAII 2023.</li><li>Built reproducible data pipelines for clinical and radiology datasets; worked directly with clinicians and researchers to validate that model outputs were clinically meaningful and not just statistically optimized.</li></ul><div class="role-core"><b>Core:</b> Clinical Model Validation, Medical Imaging, Clinician Collaboration, Research Publishing</div></div></div>
-    <div class="role"><div class="role-logo"><a href="https://centylebiotech.com/" target="_blank"><img src="images/centyle.png" alt="Centyle Biotech"></a></div><div><div class="role-org">Centyle Biotech Pvt. Ltd</div><div class="role-position">Data Scientist – Bioinformatics</div><div class="role-when">Feb 2019 – Dec 2020 · Delhi, India</div><ul class="role-bullets"><li>Built ML pipelines for biological data analysis — applied clustering, dimensionality reduction, and classification to extract patterns from complex genomic and proteomic datasets using Python and R.</li><li>Developed and iteratively tuned bioinformatics algorithms for sequence analysis and biological sample classification, establishing clear evaluation criteria and reproducibility checks before production deployment.</li><li>Collaborated with domain scientists to define data collection protocols, feature definitions, and validation workflows — ensuring models reflected real biological variability rather than data artifacts.</li></ul><div class="role-core"><b>Core:</b> Bioinformatics, Unsupervised/Supervised Learning, Genomic Data, Model Iteration</div></div></div>
-</div></div>
+<div class="container" id="top">
 
-<!-- PROJECTS -->
-<div class="fold" id="projects"><div class="fold-head" onclick="toggle(this)"><span class="fold-label">Projects</span><span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></div><div class="fold-body">
-    <div class="project"><div class="project-head"><span class="project-name">Disease Progression Modeling System</span><span class="project-year">2025</span></div><ul class="project-bullets"><li>Built ML models combining survival analysis (Cox, Kaplan-Meier), mixed-effects approaches, and deep learning to predict patient disease trajectories from multimodal clinical data and support trial enrollment decisions.</li><li>Developed biomarker identification pipelines using gradient boosting and SHAP-based interpretability, with clinician-reviewed validation to ensure predictions are statistically sound and clinically actionable.</li><li>Implemented version-controlled experiment tracking with MLflow and automated documentation to maintain model reproducibility across training iterations and data refreshes.</li></ul></div>
-    <div class="project"><div class="project-head"><span class="project-name">Generative AI for Drug Discovery</span><span class="project-year">2024</span></div><ul class="project-bullets"><li>Built a RAG-based retrieval system that lets researchers query large biomedical literature collections and receive synthesized, citation-backed answers — reducing manual literature review time.</li><li>Developed NLP pipelines for drug-target interaction extraction; evaluated retrieval quality using precision@k and MRR metrics to improve domain-specific answer accuracy.</li></ul></div>
-    <div class="project"><div class="project-head"><span class="project-name">Clinical Trial Analytics Platform</span><span class="project-year">2022</span></div><ul class="project-bullets"><li>Designed an end-to-end patient screening pipeline for Phase II/III trials, integrating EHR, lab, and imaging features with automated feature selection and calibration analysis to improve cohort matching.</li><li>Delivered operational dashboards with monitoring layers for enrollment rates, cohort drift detection, and site-level performance — replacing manual weekly reporting cycles.</li></ul></div>
-    <div class="project"><div class="project-head"><span class="project-name">Medical Imaging Diagnostics</span><span class="project-year">2021</span></div><ul class="project-bullets"><li>Implemented U-Net and ResNet models for brain tumor segmentation and hemorrhagic stroke detection, validated against radiologist-annotated ground truth on MRI/CT datasets.</li><li>Containerized the inference pipeline with Docker, added confidence scoring, and integrated into a clinical workflow for real-time diagnostic support.</li></ul></div>
-</div></div>
-
-<!-- PUBLICATIONS -->
-<div class="fold" id="publications"><div class="fold-head" onclick="toggle(this)"><span class="fold-label">Research & Publications</span><span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></div><div class="fold-body">
-    <div class="pub"><span class="pub-idx">1</span><div><div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank">Advanced MRI Segmentation Algorithm for Brain Tumor Detection</a></div><div class="pub-venue">IEEE ICAII 2023, July 2023</div><a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank" class="pub-link">View Paper →</a></div></div>
-    <div class="pub"><span class="pub-idx">2</span><div><div class="pub-title"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf" target="_blank">Prediction of Sepsis in ACLF Patients – A Machine Learning Approach</a></div><div class="pub-venue">APASL ACLF Research Consortium, June 2023</div><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf" target="_blank" class="pub-link">View Paper →</a></div></div>
-    <div class="pub"><span class="pub-idx">3</span><div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9781835" target="_blank">Brain Hemorrhagic Stroke Detection by Image Processing</a></div><div class="pub-venue">IEEE ICEECCOT 2022, March 2022</div><a href="https://ieeexplore.ieee.org/document/9781835" target="_blank" class="pub-link">View Paper →</a></div></div>
-    <div class="pub"><span class="pub-idx">4</span><div><div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank">News Classification from Microblogging Dataset using Supervised Learning</a></div><div class="pub-venue">IEEE ICCCIS 2021, February 2021</div><a href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank" class="pub-link">View Paper →</a></div></div>
-    <div class="pub"><span class="pub-idx">5</span><div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9114793/" target="_blank">Comparative Analysis of Various Extreme Multi-Label Classification Algorithms</a></div><div class="pub-venue">IEEE ICEECCOT 2019, December 2019</div><a href="https://ieeexplore.ieee.org/document/9114793/" target="_blank" class="pub-link">View Paper →</a></div></div>
-    <div class="pub"><span class="pub-idx">6</span><div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8975632" target="_blank">A Review of Omega-Based Portfolio Optimization</a></div><div class="pub-venue">IEEE ICPECA 2019, November 2019</div><a href="https://ieeexplore.ieee.org/document/8975632" target="_blank" class="pub-link">View Paper →</a></div></div>
-</div></div>
-
-<!-- EDUCATION -->
-<div class="fold" id="education"><div class="fold-head" onclick="toggle(this)"><span class="fold-label">Education & Certifications</span><span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></div><div class="fold-body">
-    <div class="edu"><div class="edu-icon"><a href="https://www.sau.int/" target="_blank"><img src="images/sau.png" alt="South Asian University"></a></div><div><div class="edu-name">South Asian University (SAARC)</div><div class="edu-degree">Master of Science in Computer Science</div><div class="edu-when">Jul 2016 – Jun 2018 · Delhi, India</div><div class="edu-body"><strong>Thesis:</strong> Multi-label text classification using deep learning and extreme classification techniques for large-scale datasets. <a href="https://drive.google.com/file/d/1SyKPvuZGP3WYV_7_h-L5hjKd3xKmUIOD/view?usp=sharing" target="_blank">[View Thesis]</a><br><strong>Coursework:</strong> Machine Learning, Deep Learning, NLP, Statistical Inference, Data Structures & Algorithms, Computer Vision, Big Data Systems, Cloud Computing</div></div></div>
-    <div class="certs-divider"><div class="certs-title">Certifications & Activities</div>
-        <div class="role" style="border-bottom:1px solid var(--rule-light);"><div class="role-logo"><a href="https://www.iitk.ac.in/" target="_blank"><img src="images/IITK.png" alt="IIT Kanpur"></a></div><div><div class="role-org">IIT Kanpur</div><div class="role-position">AI & Machine Learning Instructor</div><div class="role-when">November 2019</div><div style="font-size:14px;color:var(--body);margin-top:6px;">Conducted workshops and training sessions on AI and Machine Learning for students and professionals. <a href="https://drive.google.com/file/d/1PMIyYPeJv7G5ObBzHfYJvzAYd24qp2v-/view?usp=drive_link" target="_blank" style="font-size:12px;">[View Certificate]</a></div></div></div>
-        <div class="cert-entry"><strong>Data Science Instructor & Consultant</strong> (2018 – 2020) — Delivered project-based training in ML, Deep Learning, NLP, and Cloud to 1,000+ learners across academic and corporate programs.</div>
-        <div class="cert-entry"><strong>French & Spanish Diplomas</strong> — IIT Delhi (2016 – 2018).</div>
-        <div class="cert-entry"><strong>Conference Speaker</strong> — Presented research at 6 IEEE and APASL conferences; participated in national AI and technical workshops (DU, SAU, IIT Delhi).</div>
-        <div class="cert-entry"><strong>ACM Vice Chair & University Ambassador</strong> — Organized healthcare AI knowledge-sharing workshops at Cognizant and Sanofi.</div>
-    </div>
-</div></div>
-
-<!-- SKILLS -->
-<div class="fold" id="skills"><div class="fold-head" onclick="toggle(this)"><span class="fold-label">Technical Skills</span><span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></div><div class="fold-body">
-    <div class="skills-grid">
-        <div class="skill-row"><div class="skill-label">Languages</div><div class="skill-values">Python, R, SQL, PySpark</div></div>
-        <div class="skill-row"><div class="skill-label">ML / DL</div><div class="skill-values">TensorFlow, Keras, PyTorch, Scikit-Learn, XGBoost, LightGBM, Pandas, NumPy</div></div>
-        <div class="skill-row"><div class="skill-label">Cloud & Big Data</div><div class="skill-values">AWS (SageMaker, Lambda, S3, EC2), Azure (Databricks, ML Studio), Hadoop, Spark MLlib</div></div>
-        <div class="skill-row"><div class="skill-label">Medical AI</div><div class="skill-values">U-Net, ResNet, Clinical NLP, Survival Analysis, EHR Analytics</div></div>
-        <div class="skill-row"><div class="skill-label">NLP & Gen AI</div><div class="skill-values">Transformers, BERT, GPT, LangChain, RAG</div></div>
-        <div class="skill-row"><div class="skill-label">Clinical Data</div><div class="skill-values">SDTM, ADaM, CDISC, Clinical Trial Analytics, Biostatistics Pipelines</div></div>
-        <div class="skill-row"><div class="skill-label">Tools</div><div class="skill-values">Docker, Kubernetes, Git, Jenkins, MLflow, Tableau, Power BI</div></div>
-        <div class="skill-row"><div class="skill-label">Databases</div><div class="skill-values">PostgreSQL, MySQL, MongoDB</div></div>
-        <div class="skill-row"><div class="skill-label">Regulatory</div><div class="skill-values">HIPAA, GDPR, FDA AI/ML Guidance, GxP</div></div>
-    </div>
-</div></div>
-
-<!-- CONTACT -->
-<div class="fold" id="contact"><div class="fold-head" onclick="toggle(this)"><span class="fold-label">Contact</span><span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></div><div class="fold-body">
-    <div class="contact-inner">
-        <p>If you work in healthcare AI, clinical data science, or pharma AI/ML — or just want to talk about any of it — I'd be happy to connect.</p>
-        <div class="contact-row">
-            <a href="mailto:dubeyvikashkr@gmail.com" class="contact-btn filled">dubeyvikashkr@gmail.com</a>
-            <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank" class="contact-btn">LinkedIn</a>
-            <a href="https://github.com/VIKASAI" target="_blank" class="contact-btn">GitHub</a>
-            <a href="https://vikasai.github.io" target="_blank" class="contact-btn">Portfolio</a>
-            <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank" class="contact-btn">ResearchGate</a>
+    <!-- ==================== HEADER / BIO ==================== -->
+    <div id="about"></div>
+    <div style="display:flex;gap:24px;padding:30px 20px 20px;align-items:flex-start;" class="bio-row">
+        <div style="flex:1;">
+            <h1 style="font-family:'Source Serif 4',Georgia,serif;font-size:34px;font-weight:700;color:#1a1a1a;margin-bottom:16px;text-align:center;">
+                Vikash Kumar Dubey
+            </h1>
+            <p>
+                I'm Vikash — a <strong>Senior AI/ML Modeler Engineer</strong> at <a href="https://www.sanofi.com/" target="_blank">Sanofi</a> in Hyderabad. Most of my day involves AI/ML modeling for clinical drug development — predicting how a disease might progress, figuring out which patients are the right fit for a clinical trial, and working with multimodal clinical data to support drug development decisions.
+            </p>
+            <p style="margin-top:10px;">
+                Before Sanofi, I spent four years at <a href="https://www.cognizant.com/" target="_blank">Cognizant</a> working across healthcare and life-sciences projects — building data pipelines, implementing AI/ML models on clinical data, and putting together dashboards on AWS and Azure that clinical teams could actually use. Before that, I was doing medical AI research at the <a href="https://www.ilbs.in/" target="_blank">Institute of Liver &amp; Biliary Sciences</a> in Delhi, where I built AI/ML models for healthcare applications and developed deep learning models for medical imaging. That work got published, and it's what got me hooked on healthcare AI.
+            </p>
+            <p style="margin-top:10px;">
+                I mostly live in Python — PyTorch, XGBoost, Scikit-Learn, PySpark, SQL. I deal with clinical data standards (SDTM, ADaM) and the regulatory side (HIPAA, GDPR, 21 CFR Part 11) regularly. I've got <a href="#publications">6 published papers</a> across IEEE and APASL conferences, and between 2018 and 2020, I taught AI/ML and deep learning to about 1,000 students.
+            </p>
+            <p style="margin-top:10px;">
+                If you work in healthcare AI, clinical data science, or pharma AI/ML — or just curious about any of it — feel free to reach out.
+            </p>
+        </div>
+        <div style="width:240px;min-width:200px;" class="bio-photo">
+            <!-- Replace with: images/vikash.jpg -->
+            <img style="width:100%;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,0.08);" alt="Vikash Kumar Dubey"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='14' fill='%23f4f4f5'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='%23bbb' text-anchor='middle' dy='.3em'%3EYour Photo%3C/text%3E%3C/svg%3E">
         </div>
     </div>
-</div></div>
 
-<div class="footer">&copy; 2025 Vikash Kumar Dubey</div
+    <!-- ==================== EXPERIENCE ==================== -->
+    <div class="section" id="experience">
+        <span class="section-title">Experience</span>
+
+        <div class="exp-card">
+            <div class="exp-logo"><img src="images/sanofi.png" alt="Sanofi"></div>
+            <div class="exp-content">
+                <div class="exp-company">Sanofi</div>
+                <div class="exp-role">Senior AI/ML Modeler Engineer &nbsp;|&nbsp; May 2025 – Present</div>
+                <div class="exp-location">Hyderabad, India</div>
+                <div class="exp-desc">
+                    I'm building AI/ML models that support clinical drug development — predicting disease progression, stratifying patients for trials, and working with multimodal clinical data to support drug development decisions. One of the focus areas is neuroscience, but the modeling work spans broader clinical research too. A big part of my role is making sure the data pipelines and models meet clinical standards (SDTM, ADaM) and are actually useful to the biostatistics and clinical teams.
+                </div>
+                <div class="tech-tag"><b>Tech Stack:</b> Python, TensorFlow, PySpark, AWS, SDTM/ADaM</div>
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-logo"><img src="images/cognizant.png" alt="Cognizant"></div>
+            <div class="exp-content">
+                <div class="exp-company">Cognizant</div>
+                <div class="exp-role">Data Scientist – Healthcare &amp; Life Sciences &nbsp;|&nbsp; Jul 2021 – May 2025</div>
+                <div class="exp-location">Hyderabad, India</div>
+                <div class="exp-desc">
+                    Was part of multiple end-to-end initiatives across the healthcare and life-sciences domain — from requirement analysis and technical design to development and production release. I implemented AI/ML models — clustering, ensemble methods, deep learning, and time-series forecasting — on healthcare data. Managed data warehousing and analytics platforms, and built pipelines using Spark, Sqoop, Flume, and Hive to handle large-scale data ingestion and transformation. Most of my cloud work was on AWS and Azure. Put together Tableau and Power BI dashboards for clinical and medical data, and built predictive models for biological and clinical data analysis. Worked in Agile/Scrum teams using Jira and Confluence, collaborating with domain experts on healthcare and drug discovery projects.
+                </div>
+                <div class="tech-tag"><b>Tech Stack:</b> Python, PySpark, Spark, Hive, Sqoop, AWS, Azure, Scikit-Learn, TensorFlow, Tableau, Power BI</div>
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-logo"><img src="images/ilbs.png" alt="ILBS"></div>
+            <div class="exp-content">
+                <div class="exp-company">Institute of Liver &amp; Biliary Sciences</div>
+                <div class="exp-role">Data Scientist – Medical AI Research &nbsp;|&nbsp; Dec 2020 – Jul 2021</div>
+                <div class="exp-location">Delhi, India</div>
+                <div class="exp-desc">
+                    This is where I really got into healthcare AI. I spent most of my time collecting, cleaning, and organizing clinical and radiology data — the kind of preprocessing and wrangling work that nobody talks about but everything depends on. Built and evaluated AI/ML models using XGBoost, Random Forest, and other algorithms for clinical applications, and developed deep learning models (U-Net, CNNs) for medical imaging and diagnostics. A lot of the work involved tuning and optimizing models to squeeze out better accuracy and reduce loss. I worked closely with clinicians and researchers to make sure the outputs actually made sense in a medical context — not just on a leaderboard.
+                </div>
+                <div class="tech-tag"><b>Tech Stack:</b> Python, PyTorch, U-Net, CNN, XGBoost, Random Forest, Medical Imaging</div>
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-logo"><img src="images/centyle.png" alt="Centyle Biotech"></div>
+            <div class="exp-content">
+                <div class="exp-company">Centyle Biotech Pvt. Ltd</div>
+                <div class="exp-role">Data Scientist – Bioinformatics &nbsp;|&nbsp; Feb 2019 – Dec 2020</div>
+                <div class="exp-location">Delhi, India</div>
+                <div class="exp-desc">
+                    My first proper data science role. I collected and prepared raw data from various bio-sector sources, handling all the preprocessing, wrangling, and visualization in Python. Applied AI/ML techniques — clustering, classification — to build bioinformatics models and simplify complex biological data. Also worked on developing and optimizing algorithms for bioinformatics using machine learning concepts, deploying multiple models with iterative tuning for production-level accuracy. It was a solid foundation for everything that came after.
+                </div>
+                <div class="tech-tag"><b>Tech Stack:</b> Python, R, Scikit-Learn, ML Algorithms, Data Visualization</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <div class="section" id="projects">
+        <span class="section-title">Projects</span>
+
+        <div class="proj-item">
+            <span class="proj-header">Disease Progression Modeling System</span> &nbsp;—&nbsp; <span class="proj-meta">Current</span><br>
+            <span class="proj-desc">What I'm spending most of my time on at Sanofi. Building AI/ML models to predict how diseases progress over time using multimodal clinical data. Involves survival analysis and longitudinal modeling — it directly shapes how clinical teams design and plan their trials.</span>
+        </div>
+
+        <div class="proj-item">
+            <span class="proj-header">Generative AI for Drug Discovery</span> &nbsp;—&nbsp; <span class="proj-meta">2023</span><br>
+            <span class="proj-desc">Built a RAG-based tool that lets researchers query large collections of medical papers and get synthesized answers with citations. Also developed NLP pipelines for drug-target interaction analysis — essentially a search engine that understands biology.</span>
+        </div>
+
+        <div class="proj-item">
+            <span class="proj-header">Clinical Trial Analytics Platform</span> &nbsp;—&nbsp; <span class="proj-meta">2022</span><br>
+            <span class="proj-desc">Built at Cognizant for a healthcare client. Used AI/ML models to identify which patients are the best fit for Phase II/III trials — pulling from EHR, lab results, and imaging data. Developed patient stratification pipelines using XGBoost and ensemble methods, and set up real-time Tableau dashboards so clinical ops teams could track enrollment, site performance, and trial progress without waiting for weekly reports. The platform helped reduce patient screening time and improved trial enrollment efficiency.</span>
+        </div>
+
+        <div class="proj-item">
+            <span class="proj-header">Medical Imaging Diagnostics</span> &nbsp;—&nbsp; <span class="proj-meta">2021</span><br>
+            <span class="proj-desc">Built U-Net and ResNet AI/ML models for brain tumor segmentation and hemorrhagic stroke detection from MRI/CT scans. Containerized using Docker and integrated into a clinical workflow that medical teams could use for diagnostic support.</span>
+        </div>
+    </div>
+
+    <!-- ==================== PUBLICATIONS ==================== -->
+    <div class="section" id="publications">
+        <span class="section-title">Research &amp; Publications</span>
+        <p style="margin-bottom:14px;color:#555;font-size:14px;">AI/ML models for medical imaging, clinical prediction, and healthcare analytics.</p>
+
+        <div class="pub-item">
+            <span class="pub-num">1.</span>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank" class="pub-title">Advanced MRI Segmentation Algorithm for Brain Tumor Detection</a><br>
+            <b>Vikash Kumar Dubey</b><br>
+            <span class="pub-venue">ICAII 2023, IEEE Conference, July 2023</span> &nbsp;
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank" class="pub-link">[paper]</a>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-num">2.</span>
+            <a href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf" target="_blank" class="pub-title">Prediction of Sepsis in ACLF Patients – A Machine Learning Approach</a><br>
+            <b>Vikash Kumar Dubey</b><br>
+            <span class="pub-venue">APASL ACLF Research Consortium, June 2023</span> &nbsp;
+            <a href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf" target="_blank" class="pub-link">[paper]</a>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-num">3.</span>
+            <a href="https://ieeexplore.ieee.org/document/9781835" target="_blank" class="pub-title">Brain Hemorrhagic Stroke Detection by Image Processing</a><br>
+            <b>Vikash Kumar Dubey</b><br>
+            <span class="pub-venue">ICEECCOT 2022, IEEE Conference, March 2022</span> &nbsp;
+            <a href="https://ieeexplore.ieee.org/document/9781835" target="_blank" class="pub-link">[paper]</a>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-num">4.</span>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank" class="pub-title">News Classification from Microblogging Dataset using Supervised Learning</a><br>
+            <b>Vikash Kumar Dubey</b><br>
+            <span class="pub-venue">ICCCIS 2021, IEEE Conference, February 2021</span> &nbsp;
+            <a href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank" class="pub-link">[paper]</a>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-num">5.</span>
+            <a href="https://ieeexplore.ieee.org/document/8975632" target="_blank" class="pub-title">A Review of Omega-Based Portfolio Optimization</a><br>
+            <b>Vikash Kumar Dubey</b><br>
+            <span class="pub-venue">ICPECA 2019, IEEE Conference, November 2019</span> &nbsp;
+            <a href="https://ieeexplore.ieee.org/document/8975632" target="_blank" class="pub-link">[paper]</a>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-num">6.</span>
+            <a href="https://ieeexplore.ieee.org/document/9114793/" target="_blank" class="pub-title">Comparative Analysis of Various Extreme Multi-Label Classification Algorithms</a><br>
+            <b>Vikash Kumar Dubey</b><br>
+            <span class="pub-venue">ICEECCOT 2019, IEEE Conference, December 2019</span> &nbsp;
+            <a href="https://ieeexplore.ieee.org/document/9114793/" target="_blank" class="pub-link">[paper]</a>
+        </div>
+    </div>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <div class="section">
+        <span class="section-title">Education</span>
+
+        <div class="exp-card">
+            <div class="exp-logo"><img src="images/sau.png" alt="South Asian University"></div>
+            <div class="exp-content">
+                <div class="exp-company">South Asian University (SAARC)</div>
+                <div class="exp-role">Master of Science in Computer Science &nbsp;|&nbsp; Jul 2016 – Jun 2018</div>
+                <div class="exp-location">Delhi, India</div>
+                <div class="exp-desc">
+                    <strong>Thesis:</strong> Extreme Multi-Label Classification Learning
+                    <a href="https://drive.google.com/file/d/1SyKPvuZGP3WYV_7_h-L5hjKd3xKmUIOD/view?usp=sharing" target="_blank">[View Thesis]</a>
+                </div>
+                <div style="margin-top:6px;font-size:13px;color:#666;">
+                    <strong>Coursework:</strong> Machine Learning, Deep Learning, NLP, Data Structures &amp; Algorithms, Statistical Analysis, Computer Vision, Big Data Technologies, Cloud Computing
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <div class="section">
+        <span class="section-title">Certifications &amp; Activities</span>
+
+        <div class="cert-item">
+            <strong>AI and Machine Learning Instructor</strong> — IIT Kanpur, Nov 2019
+            <a href="https://drive.google.com/file/d/1PMIyYPeJv7G5ObBzHfYJvzAYd24qp2v-/view?usp=drive_link" target="_blank">[View Certificate]</a>
+        </div>
+        <div class="cert-item">
+            <strong>Data Science Instructor &amp; Consultant</strong> (Dec 2018 – 2020) —
+            Delivered courses on ML, Deep Learning, NLP, CV, AWS, and Azure to 1,000+ students.
+        </div>
+        <div class="cert-item">
+            <strong>IEEE Conference Speaker</strong> —
+            Presented at 5 IEEE conferences on medical AI and data science topics; organized healthcare AI workshops at Cognizant and Sanofi.
+        </div>
+    </div>
+
+    <!-- ==================== SKILLS ==================== -->
+    <div class="section" id="skills">
+        <span class="section-title">Technical Skills</span>
+
+        <table class="skills-table">
+            <thead>
+                <tr>
+                    <th style="width:150px;">Category</th>
+                    <th>Technologies &amp; Tools</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="cat-label" style="color:#4f46e5;">Languages</td><td>Python, R, SQL, PySpark</td></tr>
+                <tr><td class="cat-label" style="color:#0891b2;">ML / DL</td><td>TensorFlow, Keras, PyTorch, Scikit-Learn, XGBoost, LightGBM, Pandas, NumPy</td></tr>
+                <tr><td class="cat-label" style="color:#ea580c;">Cloud &amp; Big Data</td><td>AWS (SageMaker, Lambda, S3, EC2), Azure (Databricks, ML Studio), Hadoop, Spark MLlib</td></tr>
+                <tr><td class="cat-label" style="color:#dc2626;">Medical AI</td><td>U-Net, ResNet, 3D CNN, Clinical NLP, Survival Analysis, EHR Analytics</td></tr>
+                <tr><td class="cat-label" style="color:#7c3aed;">NLP &amp; Gen AI</td><td>Transformers, BERT, GPT, LangChain, RAG</td></tr>
+                <tr><td class="cat-label" style="color:#16a34a;">Clinical Data</td><td>SDTM, ADaM, Clinical Trial Analytics, Biostatistics Pipelines</td></tr>
+                <tr><td class="cat-label" style="color:#0284c7;">Tools</td><td>Docker, Kubernetes, Git, Jenkins, MLflow, Tableau, Power BI</td></tr>
+                <tr><td class="cat-label" style="color:#ca8a04;">Databases</td><td>PostgreSQL, MySQL, MongoDB, Hive</td></tr>
+                <tr><td class="cat-label" style="color:#be185d;">Regulatory</td><td>HIPAA, GDPR, 21 CFR Part 11, FDA AI/ML Guidance, GxP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ==================== CLOSING / CONTACT ==================== -->
+    <div class="closing" id="contact">
+        <p>
+            If you work in healthcare AI, clinical data science, or pharma AI/ML — or just curious about any of it — feel free to reach out.<br>
+            <a href="mailto:dubeyvikashkr@gmail.com">dubeyvikashkr@gmail.com</a> &middot;
+            <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank">LinkedIn</a> &middot;
+            <a href="https://github.com/VIKASAI" target="_blank">GitHub</a> &middot;
+            <a href="https://www.researchgate.net/" target="_blank">ResearchGate</a>
+        </p>
+        <a href="#top" class="back-top">Back to top &uarr;</a>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Vikash Kumar Dubey
+    </div>
 
 </div>
 
 <script>
-function toggle(el){el.parentElement.classList.toggle('open')}
-function openFold(id,e){if(e)e.preventDefault();var f=document.getElementById(id);if(!f)return;if(!f.classList.contains('open'))f.classList.add('open');setTimeout(function(){f.scrollIntoView({behavior:'smooth',block:'start'})},120);document.querySelector('.nav-menu').classList.remove('open')}
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('open');
+    });
+});
 </script>
-
 </body>
 </html>
