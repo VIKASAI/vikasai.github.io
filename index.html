@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +29,8 @@
             --off-white: #f8f8f6;
             --nav-height: 62px;
         }
+
+```
     * { margin: 0; padding: 0; box-sizing: border-box }
 
     html {
@@ -70,12 +74,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        gap: 16px;
     }
 
     .nav-brand {
         font-family: var(--serif);
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 400;
         color: var(--ink);
         letter-spacing: -0.2px;
@@ -84,68 +88,127 @@
         text-decoration: none;
         flex-shrink: 0;
         transition: opacity .18s;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-    .nav-brand:hover { opacity: 0.6; color: var(--ink) }
+    .nav-brand:hover { opacity: 0.5; color: var(--ink) }
     .nav-brand span {
         font-family: var(--mono);
-        font-size: 10px;
-        letter-spacing: 2px;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
         text-transform: uppercase;
         color: var(--accent);
         display: block;
-        margin-top: -2px;
+        margin-top: 4px;
     }
 
     .nav-menu {
         display: flex;
         align-items: center;
-        gap: 0;
+        gap: 5px;
         list-style: none;
+        flex-wrap: nowrap;
+    }
+
+    .nav-menu li {
+        display: flex;
+        align-items: center;
     }
 
     .nav-menu li a {
-        position: relative;
-        display: inline-block;
-        padding: 6px 14px;
-        font-size: 12.5px;
-        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        padding: 0 13px;
+        font-size: 11.5px;
+        font-weight: 600;
         letter-spacing: 0.2px;
-        color: var(--caption);
+        color: var(--ink);
         text-decoration: none;
-        transition: color .2s;
+        background: transparent;
+        border: 1.5px solid var(--ink);
+        border-radius: 20px;
+        transition: all .2s;
+        white-space: nowrap;
     }
 
-    .nav-menu li a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 14px;
-        right: 14px;
-        height: 1.5px;
+    .nav-menu li a::after { display: none; }
+
+    .nav-menu li a:hover {
         background: var(--ink);
-        transform: scaleX(0);
-        transform-origin: left center;
-        transition: transform .28s cubic-bezier(.4, 0, .2, 1);
+        color: #ffffff;
     }
-
-    .nav-menu li a:hover { color: var(--ink) }
-    .nav-menu li a:hover::after { transform: scaleX(1) }
 
     .nav-cta {
-        margin-left: 8px;
-        padding: 6px 18px !important;
-        font-size: 12.5px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 30px !important;
+        padding: 0 13px !important;
+        font-size: 11.5px !important;
         font-weight: 600 !important;
         color: var(--ink) !important;
-        border: 1px solid var(--rule) !important;
-        border-radius: 4px;
-        transition: background .2s, border-color .2s, color .2s !important;
+        background: transparent !important;
+        border: 1.5px solid var(--ink) !important;
+        border-radius: 20px !important;
+        transition: all .2s !important;
+        white-space: nowrap !important;
+        margin-left: 0 !important;
     }
     .nav-cta::after { display: none !important }
     .nav-cta:hover {
         background: var(--ink) !important;
-        color: var(--paper) !important;
-        border-color: var(--ink) !important;
+        color: #ffffff !important;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        list-style: none;
+    }
+
+    .nav-menu li a {
+        display: inline-block;
+        padding: 6px 13px;
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: var(--ink);
+        text-decoration: none;
+        background: transparent;
+        border: 1.5px solid var(--ink);
+        border-radius: 20px;
+        transition: all .2s;
+        line-height: 1;
+    }
+
+    .nav-menu li a::after { display: none; }
+
+    .nav-menu li a:hover {
+        background: var(--ink);
+        color: #ffffff;
+    }
+
+    .nav-cta {
+        margin-left: 2px !important;
+        padding: 6px 13px !important;
+        font-size: 11.5px !important;
+        font-weight: 600 !important;
+        color: var(--ink) !important;
+        background: transparent !important;
+        border: 1.5px solid var(--ink) !important;
+        border-radius: 20px !important;
+        transition: all .2s !important;
+    }
+    .nav-cta::after { display: none !important }
+    .nav-cta:hover {
+        background: var(--ink) !important;
+        color: #ffffff !important;
     }
 
     .nav-toggle {
@@ -195,6 +258,16 @@
     /* Updated hero name block */
     .hero-name-block {
         margin-bottom: 28px;
+    }
+
+    .hero-name-title {
+        font-family: var(--serif);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--ink);
+        line-height: 1.2;
+        letter-spacing: -0.1px;
+        margin: 0 0 6px 0;
     }
 
     .hero-name-main {
@@ -313,10 +386,10 @@
 
     .fold-label {
         font-family: var(--serif);
-        font-size: 27px;
+        font-size: 20px;
         font-weight: 400;
-        color: var(--body);
-        letter-spacing: -0.5px;
+        color: var(--ink);
+        letter-spacing: -0.3px;
         transition: color .18s;
     }
 
@@ -704,31 +777,59 @@
             display: none;
             position: absolute;
             top: var(--nav-height);
-            left: 0;
             right: 0;
+            left: auto;
+            width: 200px;
             background: var(--paper);
-            border-bottom: 1px solid var(--rule);
+            border: 1px solid var(--rule);
+            border-radius: 10px;
             flex-direction: column;
             align-items: stretch;
-            padding: 10px 0 14px;
-            gap: 0;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            padding: 10px;
+            gap: 6px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
         }
-        .nav-menu.open { display: flex }
+        .nav-menu.open { display: flex; }
+        .nav-menu li { display: flex; }
         .nav-menu li a {
-            padding: 11px 24px;
-            font-size: 13.5px;
-            color: var(--body);
-            border-bottom: none;
-        }
-        .nav-menu li a::after { display: none }
-        .nav-cta {
-            margin: 8px 24px 0 !important;
-            border-radius: 4px;
+            width: 100%;
+            height: 38px;
+            padding: 0 16px;
+            font-size: 12.5px;
+            font-weight: 600;
+            border: 1.5px solid var(--ink);
+            border-radius: 20px;
+            color: var(--ink);
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            display: block;
         }
-        .nav-toggle { display: flex }
+        .nav-menu li a:hover {
+            background: var(--ink);
+            color: #ffffff;
+        }
+        .nav-cta {
+            width: 100% !important;
+            height: 38px !important;
+            padding: 0 16px !important;
+            font-size: 12.5px !important;
+            font-weight: 600 !important;
+            border: 1.5px solid var(--ink) !important;
+            border-radius: 20px !important;
+            color: var(--ink) !important;
+            background: transparent !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 0 !important;
+        }
+        .nav-cta:hover {
+            background: var(--ink) !important;
+            color: #ffffff !important;
+        }
+        .nav-toggle { display: flex !important; }
 
         .hero {
             grid-template-columns: 1fr;
@@ -742,7 +843,7 @@
             align-items: center;
         }
         .hero-photo { width: 140px }
-        .hero-name-main { font-size: 36px }
+        .hero-name-main { font-size: 13px !important; }
 
         .role { grid-template-columns: 1fr }
         .role-logo { width: 52px; height: 34px }
@@ -757,7 +858,7 @@
 
         .project-head { flex-direction: column; gap: 2px }
 
-        .fold-label { font-size: 23px }
+        .fold-label { font-size: 18px; }
     }
 
     @media (max-width: 400px) {
@@ -766,6 +867,8 @@
         .nav-inner { padding: 0 18px }
     }
 </style>
+```
+
 </head>
 
 <body>
@@ -775,9 +878,11 @@
 <nav class="nav">
     <div class="nav-inner">
         <a class="nav-brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">
-            Vikash Kumar Dubey
+            Vikash
             <span>Senior AI/ML Engineer</span>
         </a>
+
+```
     <ul class="nav-menu" id="navMenu">
         <li><a href="#" onclick="openFold('experience',event)">Experience</a></li>
         <li><a href="#" onclick="openFold('projects',event)">Projects</a></li>
@@ -793,16 +898,20 @@
         <span></span>
     </button>
 </div>
+```
+
 </nav>
 
 <!-- ── PAGE ────────────────────────────────────────────── -->
 
 <div class="page">
 
+```
 <!-- HERO -->
 <section class="hero">
     <div>
         <div class="hero-name-block">
+            <p class="hero-name-title">Vikash Kumar Dubey</p>
             <p class="hero-name-main">Artificial Intelligence in Healthcare &amp; Clinical AI.</p>
             <p class="hero-name-sub"><span class="sub-researcher">AI Researcher</span> <span class="sep">·</span> <span class="sub-engineer">Senior AI/ML Engineer</span> <span class="sep">·</span> <a href="https://www.sanofi.com/" target="_blank" class="sanofi-link">Sanofi ↗</a></p>
         </div>
@@ -830,7 +939,7 @@
         <img class="hero-photo" alt="Vikash Kumar Dubey" src="images/vikash.jpg">
         <!-- Colorful social badges only -->
         <div class="hero-badges">
-            <a href="https://mail.google.com/mail/?view=cm&to=dubeyvikashkr@gmail.com" target="_blank" class="badge-email">Email</a>
+            <a href="mailto:dubeyvikashkr@gmail.com?subject=Hello%20Vikash" class="badge-email">Gmail</a>
             <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank" class="badge-linkedin">LinkedIn</a>
             <a href="https://github.com/VIKASAI" target="_blank" class="badge-github">GitHub</a>
             <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank" class="badge-rg">ResearchGate</a>
@@ -1118,7 +1227,7 @@
             <p>If you work in healthcare AI, clinical data science, or pharma R&amp;D — or you're just curious about any of it — I'd genuinely love to connect.</p>
             <div class="contact-row">
                 <a href="https://vikasai.github.io" target="_blank" class="contact-btn btn-home">Home</a>
-                <a href="https://mail.google.com/mail/?view=cm&to=dubeyvikashkr@gmail.com" target="_blank" class="contact-btn btn-gmail">Gmail</a>
+                <a href="mailto:dubeyvikashkr@gmail.com?subject=Hello%20Vikash" class="contact-btn btn-gmail">Gmail</a>
                 <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank" class="contact-btn btn-linkedin">LinkedIn</a>
                 <a href="https://github.com/VIKASAI" target="_blank" class="contact-btn btn-github">GitHub</a>
                 <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank" class="contact-btn btn-rg">ResearchGate</a>
@@ -1128,6 +1237,8 @@
 </div>
 
 <div class="footer">&copy; 2025 Vikash Kumar Dubey</div>
+```
+
 </div>
 
 <script>
@@ -1157,5 +1268,7 @@
         }
     });
 </script>
+
 </body>
+
 </html>
