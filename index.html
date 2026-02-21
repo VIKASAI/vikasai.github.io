@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -11,1292 +12,1165 @@
         content="Senior AI/ML Engineer at Sanofi · 6+ years · 6 published papers · Healthcare AI, Medical Imaging, Clinical ML">
     <title>Vikash Kumar Dubey — Senior AI/ML Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --serif: 'Cormorant Garamond', Georgia, serif;
-            --sans: 'Manrope', system-ui, sans-serif;
-            --mono: 'IBM Plex Mono', monospace;
-            --ink: #111;
-            --body: #3a3a3a;
-            --caption: #808080;
-            --rule: #d4d4d4;
-            --rule-light: #ebebeb;
-            --accent: #1a56db;
-            --accent-dim: rgba(26, 86, 219, 0.06);
-            --paper: #fff;
-            --off-white: #f7f7f5
+            --serif: 'DM Serif Display', Georgia, serif;
+            --sans: 'DM Sans', system-ui, sans-serif;
+            --mono: 'DM Mono', monospace;
+            --ink: #0d0d0d;
+            --body: #404040;
+            --caption: #8a8a8a;
+            --rule: #e2e2e2;
+            --rule-light: #efefef;
+            --accent: #1a4fd6;
+            --accent-dim: rgba(26, 79, 214, 0.06);
+            --paper: #ffffff;
+            --off-white: #f8f8f6;
+            --nav-height: 62px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
+```
+    * { margin: 0; padding: 0; box-sizing: border-box }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 64px
-        }
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--nav-height) + 12px)
+    }
 
-        body {
-            font-family: var(--sans);
-            color: var(--body);
-            font-size: 14.5px;
-            line-height: 1.72;
-            background: var(--paper);
-            -webkit-font-smoothing: antialiased
-        }
+    body {
+        font-family: var(--sans);
+        color: var(--body);
+        font-size: 15px;
+        line-height: 1.72;
+        background: var(--paper);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-        ::selection {
-            background: var(--accent-dim);
-            color: var(--ink)
-        }
+    ::selection { background: var(--accent-dim); color: var(--ink) }
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color .2s
-        }
+    a { color: var(--accent); text-decoration: none; transition: color .18s }
+    a:hover { color: var(--ink) }
 
-        a:hover {
-            color: var(--ink)
-        }
+    /* ─── NAV ─────────────────────────────────────────── */
 
-        .nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, .92);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid var(--rule)
-        }
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        height: var(--nav-height);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid var(--rule);
+    }
 
-        .nav-inner {
-            max-width: 860px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 20px
-        }
+    .nav-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 28px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
 
-        .nav-brand {
-            font-family: var(--serif);
-            font-size: 20px;
-            font-weight: 700;
-            color: #1a3a7a;
-            letter-spacing: -.3px;
-            cursor: pointer
-        }
+    .nav-brand {
+        font-family: var(--serif);
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--ink);
+        letter-spacing: -0.2px;
+        white-space: nowrap;
+        cursor: pointer;
+        text-decoration: none;
+        flex-shrink: 0;
+        transition: opacity .18s;
+    }
+    .nav-brand:hover { opacity: 0.6; color: var(--ink) }
+    .nav-brand span {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--accent);
+        display: block;
+        margin-top: -2px;
+    }
 
-        .nav-brand:hover {
-            color: var(--accent)
-        }
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        list-style: none;
+    }
 
+    .nav-menu li a {
+        position: relative;
+        display: inline-block;
+        padding: 6px 14px;
+        font-size: 12.5px;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        color: var(--caption);
+        text-decoration: none;
+        transition: color .2s;
+    }
+
+    .nav-menu li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 14px;
+        right: 14px;
+        height: 1.5px;
+        background: var(--ink);
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform .28s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .nav-menu li a:hover { color: var(--ink) }
+    .nav-menu li a:hover::after { transform: scaleX(1) }
+
+    .nav-cta {
+        margin-left: 8px;
+        padding: 6px 18px !important;
+        font-size: 12.5px !important;
+        font-weight: 600 !important;
+        color: var(--ink) !important;
+        border: 1px solid var(--rule) !important;
+        border-radius: 4px;
+        transition: background .2s, border-color .2s, color .2s !important;
+    }
+    .nav-cta::after { display: none !important }
+    .nav-cta:hover {
+        background: var(--ink) !important;
+        color: var(--paper) !important;
+        border-color: var(--ink) !important;
+    }
+
+    .nav-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 28px;
+        height: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 2px;
+        flex-shrink: 0;
+    }
+    .nav-toggle span {
+        display: block;
+        width: 100%;
+        height: 1.5px;
+        background: var(--ink);
+        border-radius: 2px;
+        transition: transform .3s, opacity .3s;
+        transform-origin: center;
+    }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg) }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0) }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg) }
+
+    /* ─── LAYOUT ──────────────────────────────────────── */
+
+    .page {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 0 28px;
+    }
+
+    /* ─── HERO ────────────────────────────────────────── */
+
+    .hero {
+        padding: 64px 0 52px;
+        display: grid;
+        grid-template-columns: 1fr 180px;
+        gap: 48px;
+        align-items: start;
+    }
+
+    /* Updated hero name block */
+    .hero-name-block {
+        margin-bottom: 28px;
+    }
+
+    .hero-name-main {
+        font-family: var(--sans) !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: var(--ink);
+        line-height: 1.7;
+        letter-spacing: 0;
+        margin: 0 0 6px 0;
+    }
+
+    .hero-name-sub {
+        font-family: var(--sans);
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--caption);
+        margin: 0;
+        line-height: 1.6;
+    }
+    .hero-name-sub .sep { color: var(--rule); margin: 0 6px; }
+    .sub-researcher { color: #059669; font-weight: 500; }
+    .sub-engineer   { color: #7c3aed; font-weight: 500; }
+    .sanofi-link    { color: #0a66c2; font-weight: 500; text-decoration: none; }
+    .sanofi-link:hover { color: #004182; }
+
+    .hero-summary {
+        color: var(--body);
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    .hero-summary p { margin-bottom: 14px }
+    .hero-summary strong { color: var(--ink); font-weight: 600 }
+
+    .hero-aside { text-align: center }
+
+    .hero-photo {
+        width: 100%;
+        border-radius: 10px;
+        filter: grayscale(10%);
+        transition: filter .4s, transform .4s;
+        display: block;
+    }
+    .hero-photo:hover {
+        filter: grayscale(0%);
+        transform: scale(1.012);
+    }
+
+    .hero-badges {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+
+    /* Colorful per-platform badge buttons */
+    .hero-badges a {
+        font-size: 10px;
+        font-weight: 700;
+        padding: 5px 11px;
+        border-radius: 4px;
+        transition: all .18s;
+        letter-spacing: 0.3px;
+        font-family: var(--mono);
+        color: #ffffff;
+        border: none;
+        text-transform: uppercase;
+    }
+    .badge-email    { background: #ea4335; }
+    .badge-email:hover { background: #c5221f; color: #fff; }
+    .badge-linkedin { background: #0a66c2; }
+    .badge-linkedin:hover { background: #004182; color: #fff; }
+    .badge-github   { background: #24292e; }
+    .badge-github:hover { background: #000; color: #fff; }
+    .badge-rg       { background: #00ccbb; }
+    .badge-rg:hover { background: #009e8f; color: #fff; }
+
+    .hero-quote {
+        margin-top: 24px;
+        padding: 16px 20px;
+        border-left: 2px solid var(--rule);
+        background: var(--off-white);
+    }
+    .hero-quote blockquote {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 15px;
+        color: var(--body);
+        line-height: 1.7;
+    }
+    .hero-quote cite {
+        display: block;
+        margin-top: 8px;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--caption);
+        font-style: normal;
+    }
+
+    /* ─── FOLDS ───────────────────────────────────────── */
+
+    .fold { border-top: 1px solid var(--rule) }
+
+    .fold-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+        cursor: pointer;
+        user-select: none;
+    }
+    .fold-head:hover .fold-label { color: var(--ink) }
+
+    .fold-label {
+        font-family: var(--serif);
+        font-size: 27px;
+        font-weight: 400;
+        color: var(--body);
+        letter-spacing: -0.5px;
+        transition: color .18s;
+    }
+
+    .fold-arrow {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: transform .38s cubic-bezier(.4, 0, .2, 1);
+    }
+    .fold-arrow svg {
+        width: 15px;
+        height: 15px;
+        stroke: var(--caption);
+        stroke-width: 1.5;
+        fill: none;
+        transition: stroke .18s;
+    }
+    .fold.open .fold-arrow { transform: rotate(180deg) }
+    .fold.open .fold-arrow svg { stroke: var(--ink) }
+
+    .fold-body {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height .55s cubic-bezier(.4, 0, .2, 1), opacity .4s ease, padding .4s ease;
+        padding-bottom: 0;
+    }
+    .fold.open .fold-body {
+        max-height: 6000px;
+        opacity: 1;
+        padding-bottom: 48px;
+    }
+
+    /* ─── ROLES ───────────────────────────────────────── */
+
+    .role {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 22px;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--rule-light);
+        align-items: start;
+    }
+    .role:last-child { border-bottom: none }
+
+    .role-logo {
+        width: 64px;
+        height: 40px;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: border-color .18s;
+    }
+    .role:hover .role-logo { border-color: var(--body) }
+    .role-logo img { max-width: 50px; max-height: 30px; object-fit: contain }
+
+    .role-org {
+        font-family: var(--serif);
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--ink);
+        line-height: 1.2;
+    }
+    .role-position { font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 2px }
+    .role-when {
+        font-family: var(--mono);
+        font-size: 10.5px;
+        color: var(--caption);
+        margin-top: 3px;
+    }
+    .role-para {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.82;
+        margin-top: 14px;
+    }
+    .role-core {
+        margin-top: 12px;
+        font-family: var(--mono);
+        font-size: 10.5px;
+        color: var(--caption);
+        line-height: 1.7;
+    }
+    .role-core b { color: var(--body); font-weight: 500 }
+
+    /* ─── PROJECTS ────────────────────────────────────── */
+
+    .project {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--rule-light);
+    }
+    .project:last-child { border-bottom: none }
+
+    .project-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .project-name {
+        font-family: var(--serif);
+        font-size: 19px;
+        font-weight: 400;
+        color: var(--ink);
+    }
+    .project-year {
+        font-family: var(--mono);
+        font-size: 10.5px;
+        color: var(--caption);
+        flex-shrink: 0;
+    }
+    .project-para {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.82;
+        margin-top: 10px;
+    }
+
+    /* ─── PUBLICATIONS ────────────────────────────────── */
+
+    .pub {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--rule-light);
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        gap: 14px;
+    }
+    .pub:last-child { border-bottom: none }
+
+    .pub-idx {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--caption);
+        padding-top: 3px;
+    }
+    .pub-title {
+        font-weight: 600;
+        font-size: 14.5px;
+        color: var(--ink);
+        line-height: 1.5;
+    }
+    .pub-title a { color: var(--ink) }
+    .pub-title a:hover { color: var(--accent) }
+    .pub-venue { font-size: 13px; color: var(--caption); font-style: italic; margin-top: 2px }
+    .pub-link {
+        font-family: var(--mono);
+        font-size: 11px;
+        margin-top: 3px;
+        display: inline-block;
+    }
+
+    /* ─── EDUCATION ───────────────────────────────────── */
+
+    .edu {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 20px;
+        padding: 22px 0;
+        align-items: start;
+    }
+    .edu-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .edu-icon img { max-width: 40px; max-height: 40px; object-fit: contain }
+    .edu-name { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--ink) }
+    .edu-degree { font-size: 13px; color: var(--accent); font-weight: 500 }
+    .edu-when { font-family: var(--mono); font-size: 10.5px; color: var(--caption); margin-top: 2px }
+    .edu-body { font-size: 13.5px; color: var(--body); margin-top: 10px; line-height: 1.68 }
+    .edu-body strong { color: var(--ink) }
+
+    .certs-divider {
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule-light);
+    }
+    .certs-title {
+        font-family: var(--serif);
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 18px;
+    }
+    .cert-entry {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--rule-light);
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.7;
+    }
+    .cert-entry:last-child { border-bottom: none }
+    .cert-entry strong { color: var(--ink); font-weight: 600 }
+
+    /* ─── SKILLS TABLE (colorful) ─────────────────────── */
+
+    .skills-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px var(--rule);
+    }
+
+    .skills-table thead th {
+        background: var(--ink);
+        color: var(--paper);
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 12px 20px;
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .skills-table thead th:first-child { width: 140px }
+
+    .skills-table tbody tr {
+        transition: background .18s;
+    }
+
+    .skills-table tbody tr:last-child td { border-bottom: none }
+
+    .skills-table tbody td {
+        padding: 13px 20px;
+        font-size: 13.5px;
+        line-height: 1.65;
+        border-bottom: 1px solid var(--rule-light);
+        vertical-align: middle;
+    }
+
+    .skills-table tbody td:first-child {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    /* Row color themes */
+    .skill-row-languages td:first-child { color: #2563eb; background: #eff6ff }
+    .skill-row-languages { background: #f8fbff }
+    .skill-row-languages:hover { background: #eff6ff }
+
+    .skill-row-mldl td:first-child { color: #7c3aed; background: #f5f3ff }
+    .skill-row-mldl { background: #faf9ff }
+    .skill-row-mldl:hover { background: #f5f3ff }
+
+    .skill-row-cloud td:first-child { color: #0891b2; background: #ecfeff }
+    .skill-row-cloud { background: #f7feff }
+    .skill-row-cloud:hover { background: #ecfeff }
+
+    .skill-row-medai td:first-child { color: #e11d48; background: #fff1f2 }
+    .skill-row-medai { background: #fffbfc }
+    .skill-row-medai:hover { background: #fff1f2 }
+
+    .skill-row-nlp td:first-child { color: #059669; background: #ecfdf5 }
+    .skill-row-nlp { background: #f7fdfb }
+    .skill-row-nlp:hover { background: #ecfdf5 }
+
+    .skill-row-clinical td:first-child { color: #d97706; background: #fffbeb }
+    .skill-row-clinical { background: #fffef7 }
+    .skill-row-clinical:hover { background: #fffbeb }
+
+    .skill-row-tools td:first-child { color: #64748b; background: #f1f5f9 }
+    .skill-row-tools { background: #f8fafc }
+    .skill-row-tools:hover { background: #f1f5f9 }
+
+    .skill-row-databases td:first-child { color: #9333ea; background: #faf5ff }
+    .skill-row-databases { background: #fdfaff }
+    .skill-row-databases:hover { background: #faf5ff }
+
+    .skill-row-regulatory td:first-child { color: #dc2626; background: #fef2f2 }
+    .skill-row-regulatory { background: #fffcfc }
+    .skill-row-regulatory:hover { background: #fef2f2 }
+
+    /* Tag pills in the skills values */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        margin: 2px 3px 2px 0;
+        border: 1px solid transparent;
+    }
+
+    .skill-row-languages .skill-tag { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe }
+    .skill-row-mldl .skill-tag { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe }
+    .skill-row-cloud .skill-tag { background: #cffafe; color: #0e7490; border-color: #a5f3fc }
+    .skill-row-medai .skill-tag { background: #ffe4e6; color: #be123c; border-color: #fecdd3 }
+    .skill-row-nlp .skill-tag { background: #d1fae5; color: #047857; border-color: #a7f3d0 }
+    .skill-row-clinical .skill-tag { background: #fef3c7; color: #b45309; border-color: #fde68a }
+    .skill-row-tools .skill-tag { background: #e2e8f0; color: #475569; border-color: #cbd5e1 }
+    .skill-row-databases .skill-tag { background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff }
+    .skill-row-regulatory .skill-tag { background: #fee2e2; color: #b91c1c; border-color: #fecaca }
+
+    /* ─── CONTACT ─────────────────────────────────────── */
+
+    .contact-inner {
+        text-align: center;
+        padding: 10px 0 4px;
+    }
+    .contact-inner p {
+        font-size: 15px;
+        color: var(--body);
+        line-height: 1.78;
+        max-width: 440px;
+        margin: 0 auto 26px;
+    }
+    .contact-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .contact-btn {
+        padding: 9px 22px;
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        border-radius: 4px;
+        border: none;
+        color: #ffffff;
+        transition: all .2s;
+        display: inline-block;
+    }
+
+    .btn-home     { background: #475569; }
+    .btn-home:hover { background: #334155; color: #fff; }
+
+    .btn-gmail    { background: #ea4335; }
+    .btn-gmail:hover { background: #c5221f; color: #fff; }
+
+    .btn-linkedin { background: #0a66c2; }
+    .btn-linkedin:hover { background: #004182; color: #fff; }
+
+    .btn-github   { background: #24292e; }
+    .btn-github:hover { background: #000; color: #fff; }
+
+    .btn-rg       { background: #00ccbb; }
+    .btn-rg:hover { background: #009e8f; color: #fff; }
+
+    /* ─── HIGHLIGHTS ──────────────────────────────────── */
+
+    .hi-teal   { color: #0891b2; font-weight: 600 }
+    .hi-purple { color: #6d28d9; font-weight: 600 }
+    .hi-amber  { color: #d97706; font-weight: 600 }
+    .hi-green  { color: #059669; font-weight: 600 }
+    .hi-rose   { color: #e11d48; font-weight: 600 }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+
+    .footer {
+        text-align: center;
+        padding: 40px 0;
+        font-size: 11px;
+        color: var(--caption);
+        border-top: 1px solid var(--rule-light);
+        margin-top: 16px;
+        font-family: var(--mono);
+        letter-spacing: 0.8px;
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+
+    @media (max-width: 680px) {
         .nav-menu {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center
-        }
-
-        .nav-menu a {
-            font-size: 11.5px;
-            font-weight: 700;
-            color: #1a3a7a;
-            padding: 7px 16px;
-            letter-spacing: .5px;
-            text-transform: uppercase;
-            border-radius: 20px;
-            border: 1.5px solid #1a3a7a;
-            transition: all .2s;
-            white-space: nowrap
-        }
-
-        .nav-menu a:hover {
-            color: #fff;
-            background: #1a3a7a
-        }
-
-        .nav-toggle {
             display: none;
-            background: none;
-            border: none;
-            width: 28px;
-            height: 20px;
-            cursor: pointer;
-            position: relative
-        }
-
-        .nav-toggle span,
-        .nav-toggle::before,
-        .nav-toggle::after {
             position: absolute;
+            top: var(--nav-height);
             left: 0;
-            width: 100%;
-            height: 1.5px;
-            background: var(--ink);
-            transition: all .3s
+            right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--rule);
+            flex-direction: column;
+            align-items: stretch;
+            padding: 10px 0 14px;
+            gap: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
         }
-
-        .nav-toggle::before {
-            content: '';
-            top: 0
+        .nav-menu.open { display: flex }
+        .nav-menu li a {
+            padding: 11px 24px;
+            font-size: 13.5px;
+            color: var(--body);
+            border-bottom: none;
         }
-
-        .nav-toggle span {
-            top: 50%;
-            transform: translateY(-50%)
+        .nav-menu li a::after { display: none }
+        .nav-cta {
+            margin: 8px 24px 0 !important;
+            border-radius: 4px;
+            text-align: center;
+            display: block;
         }
-
-        .nav-toggle::after {
-            content: '';
-            bottom: 0
-        }
-
-        .page {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 0 28px
-        }
+        .nav-toggle { display: flex }
 
         .hero {
-            padding: 56px 0 44px;
-            display: grid;
-            grid-template-columns: 1fr 190px;
-            gap: 40px;
-            align-items: start
+            grid-template-columns: 1fr;
+            gap: 32px;
+            padding-top: 40px;
         }
-
-        .hero-overline {
-            font-family: var(--mono);
-            font-size: 11px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 14px
-        }
-
-        .hero h1 {
-            font-family: var(--serif);
-            font-size: 44px;
-            font-weight: 600;
-            color: var(--ink);
-            line-height: 1.12;
-            letter-spacing: -1px;
-            margin-bottom: 10px
-        }
-
-        .hero-title {
-            font-family: var(--mono);
-            font-size: 11px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: var(--accent);
-            margin-bottom: 24px
-        }
-
-        .hero-title span {
-            color: var(--accent);
-            font-weight: 400
-        }
-
-        .hero-summary {
-            color: var(--body);
-            font-size: 14.5px;
-            line-height: 1.78
-        }
-
-        .hero-summary p {
-            margin-bottom: 14px
-        }
-
-        .hero-summary strong {
-            color: var(--ink);
-            font-weight: 600
-        }
-
-        .hero-contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 24px;
-            padding-top: 22px;
-            border-top: 1px solid var(--rule-light)
-        }
-
-        .hero-contact a {
-            font-size: 12px;
-            font-weight: 500;
-            color: var(--caption);
-            padding: 5px 13px;
-            border: 1px solid var(--rule);
-            border-radius: 4px;
-            transition: all .2s;
-            letter-spacing: .3px
-        }
-
-        .hero-contact a:hover {
-            color: var(--accent);
-            border-color: var(--accent);
-            background: var(--accent-dim)
-        }
-
         .hero-aside {
-            text-align: center
-        }
-
-        .hero-photo {
-            width: 100%;
-            border-radius: 14px;
-            filter: grayscale(8%);
-            transition: filter .4s, transform .4s
-        }
-
-        .hero-photo:hover {
-            filter: grayscale(0%);
-            transform: scale(1.015)
-        }
-
-        .hero-meta {
-            margin-top: 16px;
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--caption);
-            line-height: 1.8
-        }
-
-        .hero-meta a {
-            color: var(--caption)
-        }
-
-        .hero-meta a:hover {
-            color: var(--accent)
-        }
-
-        .fold {
-            border-top: 1px solid var(--rule)
-        }
-
-        .fold-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 22px 0;
-            cursor: pointer;
-            user-select: none
-        }
-
-        .fold-head:hover .fold-label {
-            color: var(--ink)
-        }
-
-        .fold-label {
-            font-family: var(--serif);
-            font-size: 26px;
-            font-weight: 600;
-            color: var(--body);
-            letter-spacing: -.3px;
-            transition: color .2s
-        }
-
-        .fold-arrow {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: transform .4s cubic-bezier(.4, 0, .2, 1)
-        }
-
-        .fold-arrow svg {
-            width: 16px;
-            height: 16px;
-            stroke: var(--caption);
-            stroke-width: 2;
-            fill: none;
-            transition: stroke .2s
-        }
-
-        .fold.open .fold-arrow {
-            transform: rotate(180deg)
-        }
-
-        .fold.open .fold-arrow svg {
-            stroke: var(--accent)
-        }
-
-        .fold-body {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height .55s cubic-bezier(.4, 0, .2, 1), opacity .45s ease, padding .45s ease;
-            padding-bottom: 0
-        }
-
-        .fold.open .fold-body {
-            max-height: 6000px;
-            opacity: 1;
-            padding-bottom: 40px
-        }
-
-        .role {
-            display: grid;
-            grid-template-columns: 68px 1fr;
-            gap: 20px;
-            padding: 24px 0;
-            border-bottom: 1px solid var(--rule-light);
-            align-items: start
-        }
-
-        .role:last-child {
-            border-bottom: none
-        }
-
-        .role-logo {
-            width: 68px;
-            height: 42px;
-            background: var(--paper);
-            border: 1px solid var(--rule);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transition: border-color .2s
-        }
-
-        .role:hover .role-logo {
-            border-color: var(--accent)
-        }
-
-        .role-logo img {
-            max-width: 54px;
-            max-height: 32px;
-            object-fit: contain
-        }
-
-        .role-org {
-            font-family: var(--serif);
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--ink);
-            line-height: 1.2
-        }
-
-        .role-position {
-            font-size: 13.5px;
-            font-weight: 600;
-            color: var(--accent);
-            margin-top: 1px
-        }
-
-        .role-when {
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--caption);
-            margin-top: 3px
-        }
-
-        .role-bullets {
-            margin-top: 12px;
-            padding-left: 16px
-        }
-
-        .role-bullets li {
-            color: var(--body);
-            font-size: 14px;
-            line-height: 1.72;
-            margin-bottom: 7px
-        }
-
-        .role-bullets li::marker {
-            color: var(--rule)
-        }
-
-        .role-core {
-            margin-top: 12px;
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--caption);
-            line-height: 1.7
-        }
-
-        .role-core b {
-            color: var(--body);
-            font-weight: 500
-        }
-
-        .project {
-            padding: 22px 0;
-            border-bottom: 1px solid var(--rule-light)
-        }
-
-        .project:last-child {
-            border-bottom: none
-        }
-
-        .project-head {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 12px
-        }
-
-        .project-name {
-            font-family: var(--serif);
-            font-size: 19px;
-            font-weight: 600;
-            color: var(--ink)
-        }
-
-        .project-year {
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--caption);
-            flex-shrink: 0
-        }
-
-        .project-bullets {
-            margin-top: 10px;
-            padding-left: 16px
-        }
-
-        .project-bullets li {
-            color: var(--body);
-            font-size: 14px;
-            line-height: 1.72;
-            margin-bottom: 6px
-        }
-
-        .project-bullets li::marker {
-            color: var(--rule)
-        }
-
-        .pub {
-            padding: 14px 0;
-            border-bottom: 1px solid var(--rule-light);
-            display: grid;
-            grid-template-columns: 24px 1fr;
-            gap: 12px
-        }
-
-        .pub:last-child {
-            border-bottom: none
-        }
-
-        .pub-idx {
-            font-family: var(--mono);
-            font-size: 12px;
-            color: var(--caption);
-            padding-top: 3px
-        }
-
-        .pub-title {
-            font-weight: 600;
-            font-size: 14.5px;
-            color: var(--ink);
-            line-height: 1.5
-        }
-
-        .pub-title a {
-            color: var(--ink)
-        }
-
-        .pub-title a:hover {
-            color: var(--accent)
-        }
-
-        .pub-venue {
-            font-size: 13px;
-            color: var(--caption);
-            font-style: italic;
-            margin-top: 1px
-        }
-
-        .pub-link {
-            font-family: var(--mono);
-            font-size: 11.5px;
-            margin-top: 2px;
-            display: inline-block
-        }
-
-        .edu {
-            display: grid;
-            grid-template-columns: 58px 1fr;
-            gap: 18px;
-            padding: 20px 0;
-            align-items: start
-        }
-
-        .edu-icon {
-            width: 58px;
-            height: 58px;
-            background: var(--paper);
-            border: 1px solid var(--rule);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden
-        }
-
-        .edu-icon img {
-            max-width: 42px;
-            max-height: 42px;
-            object-fit: contain
-        }
-
-        .edu-name {
-            font-family: var(--serif);
-            font-size: 19px;
-            font-weight: 600;
-            color: var(--ink)
-        }
-
-        .edu-degree {
-            font-size: 13.5px;
-            color: var(--accent);
-            font-weight: 500
-        }
-
-        .edu-when {
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--caption);
-            margin-top: 2px
-        }
-
-        .edu-body {
-            font-size: 13.5px;
-            color: var(--body);
-            margin-top: 8px;
-            line-height: 1.65
-        }
-
-        .edu-body strong {
-            color: var(--ink)
-        }
-
-        .certs-divider {
-            margin-top: 28px;
-            padding-top: 20px;
-            border-top: 1px solid var(--rule-light)
-        }
-
-        .certs-title {
-            font-family: var(--serif);
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--ink);
-            margin-bottom: 16px
-        }
-
-        .cert-entry {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--rule-light);
-            font-size: 14px;
-            color: var(--body);
-            line-height: 1.65
-        }
-
-        .cert-entry:last-child {
-            border-bottom: none
-        }
-
-        .cert-entry strong {
-            color: var(--ink);
-            font-weight: 600
-        }
-
-        .skills-grid {
+            order: -1;
             display: flex;
             flex-direction: column;
-            gap: 0
+            align-items: center;
         }
+        .hero-photo { width: 140px }
+        .hero-name-main { font-size: 36px }
 
-        .skill-row {
-            display: grid;
-            grid-template-columns: 115px 1fr;
-            gap: 16px;
-            padding: 11px 0;
-            border-bottom: 1px solid var(--rule-light);
-            align-items: baseline
-        }
+        .role { grid-template-columns: 1fr }
+        .role-logo { width: 52px; height: 34px }
 
-        .skill-row:last-child {
-            border-bottom: none
-        }
+        .edu { grid-template-columns: 1fr }
+        .edu-icon { width: 46px; height: 46px }
 
-        .skill-label {
-            font-family: var(--mono);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--caption);
-            font-weight: 500
-        }
+        .skills-table thead th:first-child { width: 100px }
+        .skills-table tbody td { padding: 10px 14px }
 
-        .skill-values {
-            font-size: 14px;
-            color: var(--body);
-            line-height: 1.65
-        }
+        .pub { grid-template-columns: 18px 1fr }
 
-        .contact-inner {
-            text-align: center;
-            padding: 8px 0
-        }
+        .project-head { flex-direction: column; gap: 2px }
 
-        .contact-inner p {
-            font-size: 15.5px;
-            color: var(--body);
-            line-height: 1.75;
-            max-width: 480px;
-            margin: 0 auto 24px
-        }
+        .fold-label { font-size: 23px }
+    }
 
-        .contact-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px
-        }
+    @media (max-width: 400px) {
+        .hero-name-main { font-size: 30px }
+        .page { padding: 0 18px }
+        .nav-inner { padding: 0 18px }
+    }
+</style>
+```
 
-        .contact-btn {
-            padding: 10px 24px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .3px;
-            border: 1px solid #1a3a7a;
-            border-radius: 6px;
-            color: #1a3a7a;
-            transition: all .25s
-        }
-
-        .contact-btn:hover {
-            background: #1a3a7a;
-            color: #fff;
-            border-color: #1a3a7a
-        }
-
-        .contact-btn.filled {
-            background: var(--ink);
-            color: var(--paper);
-            border-color: var(--ink)
-        }
-
-        .contact-btn.filled:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--paper)
-        }
-
-        .hi-teal {
-            color: #0891b2;
-            font-weight: 600
-        }
-
-        .hi-purple {
-            color: #7c3aed;
-            font-weight: 600
-        }
-
-        .hi-amber {
-            color: #d97706;
-            font-weight: 600
-        }
-
-        .hi-green {
-            color: #059669;
-            font-weight: 600
-        }
-
-        .hi-rose {
-            color: #e11d48;
-            font-weight: 600
-        }
-
-        .role-para {
-            font-size: 14px;
-            color: var(--body);
-            line-height: 1.8;
-            margin-top: 12px
-        }
-
-        .project-para {
-            font-size: 14px;
-            color: var(--body);
-            line-height: 1.8;
-            margin-top: 10px
-        }
-
-        .hero-quote {
-            margin-top: 22px;
-            padding: 14px 20px;
-            border-left: 3px solid var(--rule);
-            background: var(--off-white);
-            border-radius: 0 6px 6px 0
-        }
-
-        .hero-quote blockquote {
-            font-family: var(--serif);
-            font-style: italic;
-            font-size: 15.5px;
-            color: var(--body);
-            line-height: 1.7;
-            margin: 0
-        }
-
-        .hero-quote cite {
-            display: block;
-            margin-top: 8px;
-            font-family: var(--mono);
-            font-size: 11px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--caption);
-            font-style: normal
-        }
-
-        .footer {
-            text-align: center;
-            padding: 36px 0;
-            font-size: 12px;
-            color: var(--rule);
-            border-top: 1px solid var(--rule-light);
-            margin-top: 16px;
-            font-family: var(--mono);
-            letter-spacing: .5px
-        }
-
-        @media(max-width:640px) {
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 28px;
-                padding-top: 36px
-            }
-
-            .hero-aside {
-                order: -1;
-                display: flex;
-                flex-direction: column;
-                align-items: center
-            }
-
-            .hero-photo {
-                width: 150px
-            }
-
-            .hero h1 {
-                font-size: 34px;
-                text-align: center
-            }
-
-            .hero-title,
-            .hero-overline {
-                text-align: center
-            }
-
-            .hero-contact {
-                justify-content: center
-            }
-
-            .role {
-                grid-template-columns: 1fr
-            }
-
-            .role-logo {
-                width: 56px;
-                height: 34px
-            }
-
-            .role-logo img {
-                max-width: 44px;
-                max-height: 28px
-            }
-
-            .edu {
-                grid-template-columns: 1fr
-            }
-
-            .edu-icon {
-                width: 48px;
-                height: 48px
-            }
-
-            .skill-row {
-                grid-template-columns: 1fr;
-                gap: 4px
-            }
-
-            .pub {
-                grid-template-columns: 20px 1fr
-            }
-
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--paper);
-                border-bottom: 1px solid var(--rule);
-                padding: 12px 20px;
-                gap: 0
-            }
-
-            .nav-menu.open {
-                display: flex
-            }
-
-            .nav-menu a {
-                padding: 10px 14px;
-                font-size: 13px
-            }
-
-            .nav-toggle {
-                display: block
-            }
-
-            .fold-label {
-                font-size: 22px
-            }
-
-            .project-head {
-                flex-direction: column;
-                gap: 2px
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <nav class="nav">
-        <div class="nav-inner">
-            <button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('open')"
-                aria-label="Menu"><span></span></button>
-            <div class="nav-menu">
-                <a href="#"
-                    onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});document.querySelector('.nav-menu').classList.remove('open')">Home</a>
-                <a href="#" onclick="openFold('experience',event)">Experience</a>
-                <a href="#" onclick="openFold('projects',event)">Projects</a>
-                <a href="#" onclick="openFold('publications',event)">Research</a>
-                <a href="#" onclick="openFold('education',event)">Education</a>
-                <a href="#" onclick="openFold('skills',event)">Skills</a>
-                <a href="#" onclick="openFold('contact',event)">Contact</a>
-            </div>
-        </div>
-    </nav>
+<!-- ── NAV ─────────────────────────────────────────────── -->
 
-    <div class="page">
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="nav-brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">
+            Vikash Kumar Dubey
+            <span>Senior AI/ML Engineer</span>
+        </a>
 
-        <section class="hero">
-            <div>
-                <h1>Vikash Kumar Dubey</h1>
-                <div class="hero-title">Senior AI/ML Engineer at <a href="https://www.sanofi.com/"
-                        target="_blank">Sanofi</a> <span>— Hyderabad, India</span></div>
-                <div class="hero-summary">
-                    <p>I build AI/ML models and data pipelines for pharmaceutical drug development, clinical
-                        research, and bioinformatics — working across disease progression modeling, patient
-                        stratification, medical imaging diagnostics, and clinical trial analytics with multimodal data
-                        (EHR, imaging, genomics).</p>
-                    <p>I have deep roots in CDISC-aligned data standards (SDTM/ADaM), regulated environments, and close
-                        collaboration with Biostatistics, Clinical Development, and R&D teams. I've also published
-                        <strong>6 peer-reviewed papers</strong> at IEEE and APASL conferences — the research side keeps
-                        me honest.
-                    </p>
-                </div>
-                <div class="hero-quote">
-                    <blockquote>"Nothing in life is to be feared, it is only to be understood. Now is the time to
-                        understand more, so that we may fear less."</blockquote>
-                    <cite>— Marie Curie &nbsp;·&nbsp; <span
-                            style="font-style:italic;letter-spacing:0;text-transform:none;font-family:var(--sans);font-size:12px;color:var(--caption)">In
-                            today’s AI world, the more we learn, the less we fear.</span></cite>
-                </div>
-                <div class="hero-contact">
-                </div>
-            </div>
-            <div class="hero-aside">
-                <img class="hero-photo" alt="Vikash Kumar Dubey" src="images/vikash.jpg">
-                <div class="hero-meta">
-                    <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px">
-                        <a href="mailto:dubeyvikashkr@gmail.com"
-                            style="color:#1a3a7a;font-size:11px;font-weight:600;text-decoration:none;padding:4px 12px;border:1px solid #c8d4e8;border-radius:20px;transition:all .2s;letter-spacing:.3px"
-                            onmouseover="this.style.background='#1a3a7a';this.style.color='#fff';this.style.borderColor='#1a3a7a'"
-                            onmouseout="this.style.background='';this.style.color='#1a3a7a';this.style.borderColor='#c8d4e8'">Email</a>
-                        <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank"
-                            style="color:#1a3a7a;font-size:11px;font-weight:600;text-decoration:none;padding:4px 12px;border:1px solid #c8d4e8;border-radius:20px;transition:all .2s;letter-spacing:.3px"
-                            onmouseover="this.style.background='#1a3a7a';this.style.color='#fff';this.style.borderColor='#1a3a7a'"
-                            onmouseout="this.style.background='';this.style.color='#1a3a7a';this.style.borderColor='#c8d4e8'">LinkedIn</a>
-                        <a href="https://github.com/VIKASAI" target="_blank"
-                            style="color:#1a3a7a;font-size:11px;font-weight:600;text-decoration:none;padding:4px 12px;border:1px solid #c8d4e8;border-radius:20px;transition:all .2s;letter-spacing:.3px"
-                            onmouseover="this.style.background='#1a3a7a';this.style.color='#fff';this.style.borderColor='#1a3a7a'"
-                            onmouseout="this.style.background='';this.style.color='#1a3a7a';this.style.borderColor='#c8d4e8'">GitHub</a>
-                        <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank"
-                            style="color:#1a3a7a;font-size:11px;font-weight:600;text-decoration:none;padding:4px 12px;border:1px solid #c8d4e8;border-radius:20px;transition:all .2s;letter-spacing:.3px"
-                            onmouseover="this.style.background='#1a3a7a';this.style.color='#fff';this.style.borderColor='#1a3a7a'"
-                            onmouseout="this.style.background='';this.style.color='#1a3a7a';this.style.borderColor='#c8d4e8'">ResearchGate</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+```
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="#" onclick="openFold('experience',event)">Experience</a></li>
+        <li><a href="#" onclick="openFold('projects',event)">Projects</a></li>
+        <li><a href="#" onclick="openFold('publications',event)">Research</a></li>
+        <li><a href="#" onclick="openFold('education',event)">Education</a></li>
+        <li><a href="#" onclick="openFold('skills',event)">Skills</a></li>
+        <li><a href="#" onclick="openFold('contact',event)" class="nav-cta">Contact</a></li>
+    </ul>
 
-        <!-- EXPERIENCE -->
-        <div class="fold" id="experience">
-            <div class="fold-head" onclick="toggle(this)"><span class="fold-label">Experience</span><span
-                    class="fold-arrow"><svg viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg></span></div>
-            <div class="fold-body">
-                <div class="role">
-                    <div class="role-logo"><a href="https://www.sanofi.com/" target="_blank"><img
-                                src="images/sanofi.png" alt="Sanofi"></a></div>
-                    <div>
-                        <div class="role-org">Sanofi</div>
-                        <div class="role-position">Senior AI/ML Modeler Engineer</div>
-                        <div class="role-when">May 2025 – Present · Hyderabad, India</div>
-                        <p class="role-para">At Sanofi I work deep in the science — building <span
-                                class="hi-teal">survival
-                                and longitudinal models</span> that track how diseases progress
-                            through time, drawing from rich multimodal datasets: cognitive endpoints, <span
-                                class="hi-purple">MRI/PET neuroimaging</span>, genomic biomarkers. Every model has to
-                            hold up under scrutiny — I evaluate discrimination, calibration, and subgroup robustness
-                            before anything reaches a trial team. The pipelines I build follow <span
-                                class="hi-amber">CDISC
-                                standards (SDTM/ADaM)</span> end-to-end, with automated
-                            validation and full regulatory traceability. Working shoulder-to-shoulder with Biostatistics
-                            and Clinical Development, I translate messy clinical questions into model specs that are
-                            actually useful.</p>
-                        <div class="role-core"><b>Core:</b> Survival Analysis, Longitudinal Modeling, SDTM/ADaM,
-                            Multimodal Clinical Data, Model Validation</div>
-                    </div>
-                </div>
-                <div class="role">
-                    <div class="role-logo"><a href="https://www.cognizant.com/" target="_blank"><img
-                                src="images/cognizant.png" alt="Cognizant"></a></div>
-                    <div>
-                        <div class="role-org">Cognizant</div>
-                        <div class="role-position">Data Scientist – Healthcare</div>
-                        <div class="role-when">Jul 2021 – May 2025 · Hyderabad, India</div>
-                        <p class="role-para">Four years at Cognizant meant wearing many hats across pharma and life
-                            sciences. I built <span class="hi-teal">patient stratification and trial recruitment
-                                models</span> using XGBoost and LightGBM — always with bias checks across diverse
-                            cohorts. The infrastructure side was just as important: end-to-end <span
-                                class="hi-purple">ML
-                                pipelines on AWS and Azure</span>, from raw ingestion through to
-                            serving, running across multiple concurrent projects. I brought <span
-                                class="hi-green">generative AI into clinical workflows</span> — document automation,
-                            diagnostic support — and set up the MLOps scaffolding (versioning, monitoring, retraining)
-                            to keep it reliable. The Tableau and Power BI dashboards I delivered became daily tools for
-                            clinical and ops teams tracking enrollment in real time. I also mentored junior data
-                            scientists and owned data quality across pipelines.</p>
-                        <div class="role-core"><b>Core:</b> Ensemble Modeling, Cloud ML Pipelines, Clinical Data
-                            Quality, Dashboard Analytics, MLOps</div>
-                    </div>
-                </div>
-                <div class="role">
-                    <div class="role-logo"><a href="https://www.ilbs.in/" target="_blank"><img src="images/ilbs.png"
-                                alt="ILBS"></a></div>
-                    <div>
-                        <div class="role-org">Institute of Liver & Biliary Sciences</div>
-                        <div class="role-position">Data Scientist – Medical AI Research</div>
-                        <div class="role-when">Dec 2020 – Jul 2021 · Delhi, India</div>
-                        <p class="role-para">This was the role that turned me into a medical AI researcher. Working with
-                            clinicians at ILBS, I built <span class="hi-rose">sepsis risk prediction models</span> for
-                            ACLF patients — XGBoost and Random Forest with careful threshold tuning, so that model
-                            outputs actually mapped to clinical decisions (published APASL 2023). On the imaging side, I
-                            implemented <span class="hi-teal">U-Net and CNN models</span> for brain tumor segmentation
-                            from MRI, validated against radiologist-annotated ground truth using dice coefficient and
-                            cross-fold validation (IEEE ICAII 2023). Working directly with clinicians forced me to care
-                            about clinical meaning, not just statistical metrics — a perspective I carry into everything
-                            I do.</p>
-                        <div class="role-core"><b>Core:</b> Clinical Model Validation, Medical Imaging, Clinician
-                            Collaboration, Research Publishing</div>
-                    </div>
-                </div>
-                <div class="role">
-                    <div class="role-logo"><a href="https://centylebiotech.com/" target="_blank"><img
-                                src="images/centyle.png" alt="Centyle Biotech"></a></div>
-                    <div>
-                        <div class="role-org">Centyle Biotech Pvt. Ltd</div>
-                        <div class="role-position">Data Scientist – Bioinformatics</div>
-                        <div class="role-when">Feb 2019 – Dec 2020 · Delhi, India</div>
-                        <p class="role-para">My entry into ML was through biology. At Centyle Biotech, I built pipelines
-                            to make sense of complex <span class="hi-green">genomic and proteomic datasets</span> —
-                            clustering, dimensionality reduction, classification — working in Python and R. The data was
-                            messy and the domain required real care: I collaborated closely with domain scientists to
-                            define features and validation workflows that captured actual biological variability, not
-                            just data artifacts. It taught me to iterate carefully and document rigorously before
-                            anything touched production.</p>
-                        <div class="role-core"><b>Core:</b> Bioinformatics, Unsupervised/Supervised Learning, Genomic
-                            Data, Model Iteration</div>
-                    </div>
-                </div>
-            </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+```
+
+</nav>
+
+<!-- ── PAGE ────────────────────────────────────────────── -->
+
+<div class="page">
+
+```
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <div class="hero-name-block">
+            <p class="hero-name-main">Artificial Intelligence in Healthcare &amp; Clinical AI.</p>
+            <p class="hero-name-sub"><span class="sub-researcher">AI Researcher</span> <span class="sep">·</span> <span class="sub-engineer">Senior AI/ML Engineer</span> <span class="sep">·</span> <a href="https://www.sanofi.com/" target="_blank" class="sanofi-link">Sanofi ↗</a></p>
         </div>
 
-        <!-- PROJECTS -->
-        <div class="fold" id="projects">
-            <div class="fold-head" onclick="toggle(this)"><span class="fold-label">Projects</span><span
-                    class="fold-arrow"><svg viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg></span></div>
-            <div class="fold-body">
-                <div class="project">
-                    <div class="project-head"><span class="project-name">Disease Progression Modeling System</span><span
-                            class="project-year">2025</span></div>
-                    <p class="project-para">A system that forecasts how a patient's disease will evolve — combining
-                        <span class="hi-teal">Cox &amp; Kaplan-Meier survival analysis</span>, linear mixed-effects
-                        models, gradient boosting, and deep learning over multimodal clinical data (EHR records,
-                        imaging, genomic markers). Feature engineering was critical: I built biomarker identification
-                        pipelines using <span class="hi-green">Random Forest and XGBoost with SHAP</span> to make sure
-                        the right signals drove the predictions. The hard part wasn't the modeling; it was making
-                        outputs that clinicians could actually trust — so I added <span
-                            class="hi-purple">interpretability
-                            layers</span>, ran every key result past domain
-                        reviewers, and tuned decision thresholds to match real clinical workflows. Cross-validation
-                        across patient subgroups kept the models honest. Experiment tracking via <span
-                            class="hi-amber">MLflow</span> kept everything reproducible across dozens of data refreshes
-                        and training runs.
-                    </p>
-                </div>
-                <div class="project">
-                    <div class="project-head"><span class="project-name">Generative AI for Drug Discovery</span><span
-                            class="project-year">2024</span></div>
-                    <p class="project-para">What if a researcher could just <em>ask</em> the literature a question and
-                        get a cited, synthesized answer? That's exactly what this built. A <span
-                            class="hi-green">RAG-based
-                            retrieval system</span> over large biomedical corpora — using
-                        vector embeddings and semantic search to retrieve the most relevant passages, then synthesizing
-                        answers via LLM. Paired it with <span class="hi-rose">NLP pipelines for drug-target interaction
-                            extraction</span> using fine-tuned transformer models. Retrieval quality was measured with
-                        precision@k and MRR — not vibes. The result: researchers spending far less time on manual
-                        literature review and more time on actual science.</p>
-                </div>
-                <div class="project">
-                    <div class="project-head"><span class="project-name">Clinical Trial Analytics Platform</span><span
-                            class="project-year">2022</span></div>
-                    <p class="project-para">Built the data engine behind a clinical trial: an end-to-end <span
-                            class="hi-teal">patient screening pipeline</span> for Phase II/III studies, fusing EHR, lab,
-                        and imaging features with automated feature selection (Lasso, mutual information), <span
-                            class="hi-purple">machine learning classifiers</span>, and calibration analysis to improve
-                        cohort matching. On top of that, operational dashboards built with Tableau that gave trial teams
-                        <span class="hi-amber">live visibility</span> into enrollment rates, cohort drift, and site
-                        performance — replacing the weekly manual reporting grind entirely and helping teams act faster.
-                    </p>
-                </div>
-                <div class="project">
-                    <div class="project-head"><span class="project-name">Medical Imaging Diagnostics</span><span
-                            class="project-year">2021</span></div>
-                    <p class="project-para"><span class="hi-purple">U-Net and ResNet</span> <span class="hi-teal">deep
-                            learning models</span> trained to detect brain tumors and hemorrhagic strokes from MRI/CT
-                        scans — validated against radiologist-annotated ground truth using dice coefficient, IoU, and
-                        cross-fold validation. Confidence scoring was added so radiologists could see exactly how
-                        certain the model was at each prediction. The full inference pipeline was then containerized
-                        with Docker and integrated into a real clinical workflow for live diagnostic support — bridging
-                        the gap between research-grade accuracy and production reliability.</p>
-                </div>
-            </div>
+        <div class="hero-summary">
+            <p>I build AI/ML models and data pipelines for pharmaceutical drug development, clinical
+                research, and bioinformatics — working across disease progression modeling, patient
+                stratification, medical imaging diagnostics, and clinical trial analytics with multimodal data
+                (EHR, imaging, genomics).</p>
+            <p>I have deep roots in CDISC-aligned data standards (SDTM/ADaM), regulated environments, and close
+                collaboration with Biostatistics, Clinical Development, and R&amp;D teams. I've also published
+                <strong>6 peer-reviewed papers</strong> at IEEE and APASL conferences — the research side keeps
+                me honest.</p>
+        </div>
+        <div class="hero-quote">
+            <blockquote>"Nothing in life is to be feared, it is only to be understood. Now is the time to
+                understand more, so that we may fear less."</blockquote>
+            <cite>— Marie Curie &nbsp;·&nbsp; <span
+                    style="font-style:italic;letter-spacing:0;text-transform:none;font-family:var(--sans);font-size:12px;color:var(--caption)">In
+                    today's AI world, the more we learn, the less we fear.</span></cite>
         </div>
 
-        <!-- PUBLICATIONS -->
-        <div class="fold" id="publications">
-            <div class="fold-head" onclick="toggle(this)"><span class="fold-label">Research & Publications</span><span
-                    class="fold-arrow"><svg viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg></span></div>
-            <div class="fold-body">
-                <div class="pub"><span class="pub-idx">1</span>
-                    <div>
-                        <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14"
-                                target="_blank">Advanced MRI Segmentation Algorithm for Brain Tumor Detection</a></div>
-                        <div class="pub-venue">IEEE ICAII 2023, July 2023</div><a
-                            href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank"
-                            class="pub-link">View Paper →</a>
-                    </div>
-                </div>
-                <div class="pub"><span class="pub-idx">2</span>
-                    <div>
-                        <div class="pub-title"><a
-                                href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf"
-                                target="_blank">Prediction of Sepsis in ACLF Patients – A Machine Learning Approach</a>
-                        </div>
-                        <div class="pub-venue">APASL ACLF Research Consortium, June 2023</div><a
-                            href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf"
-                            target="_blank" class="pub-link">View Paper →</a>
-                    </div>
-                </div>
-                <div class="pub"><span class="pub-idx">3</span>
-                    <div>
-                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9781835"
-                                target="_blank">Brain
-                                Hemorrhagic Stroke Detection by Image Processing</a></div>
-                        <div class="pub-venue">IEEE ICEECCOT 2022, March 2022</div><a
-                            href="https://ieeexplore.ieee.org/document/9781835" target="_blank" class="pub-link">View
-                            Paper →</a>
-                    </div>
-                </div>
-                <div class="pub"><span class="pub-idx">4</span>
-                    <div>
-                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9397074"
-                                target="_blank">News Classification from Microblogging Dataset using Supervised
-                                Learning</a></div>
-                        <div class="pub-venue">IEEE ICCCIS 2021, February 2021</div><a
-                            href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank"
-                            class="pub-link">View Paper →</a>
-                    </div>
-                </div>
-                <div class="pub"><span class="pub-idx">5</span>
-                    <div>
-                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9114793/"
-                                target="_blank">Comparative Analysis of Various Extreme Multi-Label Classification
-                                Algorithms</a></div>
-                        <div class="pub-venue">IEEE ICEECCOT 2019, December 2019</div><a
-                            href="https://ieeexplore.ieee.org/document/9114793/" target="_blank" class="pub-link">View
-                            Paper →</a>
-                    </div>
-                </div>
-                <div class="pub"><span class="pub-idx">6</span>
-                    <div>
-                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8975632" target="_blank">A
-                                Review of Omega-Based Portfolio Optimization</a></div>
-                        <div class="pub-venue">IEEE ICPECA 2019, November 2019</div><a
-                            href="https://ieeexplore.ieee.org/document/8975632" target="_blank" class="pub-link">View
-                            Paper →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="fold" id="education">
-            <div class="fold-head" onclick="toggle(this)"><span class="fold-label">Education &
-                    Certifications</span><span class="fold-arrow"><svg viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg></span></div>
-            <div class="fold-body">
-                <div class="edu">
-                    <div class="edu-icon"><a href="https://www.sau.int/" target="_blank"><img src="images/sau.png"
-                                alt="South Asian University"></a></div>
-                    <div>
-                        <div class="edu-name">South Asian University (SAARC)</div>
-                        <div class="edu-degree">Master of Science in Computer Science</div>
-                        <div class="edu-when">Jul 2016 – Jun 2018 · Delhi, India</div>
-                        <div class="edu-body">
-                            <p style="margin-bottom:6px"><strong>Thesis:</strong> Multi-label text classification using
-                                deep learning and extreme classification techniques for large-scale datasets. <a
-                                    href="https://drive.google.com/file/d/1rzC6EmTkORh6ussemYQ9D55BcYQUkWAr/view?usp=drivesdk"
-                                    target="_blank">[View Thesis]</a></p>
-                            <p><strong>Coursework:</strong> Machine Learning, Deep Learning, NLP, Statistical Inference,
-                                Data Structures &amp; Algorithms, Computer Vision, Big Data Systems, Cloud Computing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="certs-divider">
-                    <div class="certs-title">Beyond the Work</div>
-                    <div class="cert-entry">Taught ML, Deep Learning, NLP &amp; Cloud to <strong>1,000+
-                            learners</strong> as a Data Science Instructor &amp; Consultant (2018–2020), and ran
-                        hands-on AI workshops at IIT Kanpur. <a
-                            href="https://drive.google.com/file/d/1PMIyYPeJv7G5ObBzHfYJvzAYd24qp2v-/view?usp=drive_link"
-                            target="_blank" style="font-size:12px">[Certificate]</a></div>
-                    <div class="cert-entry">Presented research at <strong>6 IEEE &amp; APASL conferences</strong> and
-                        served as ACM Vice Chair &amp; University Ambassador — running healthcare AI knowledge-sharing
-                        workshops at Cognizant and Sanofi.</div>
-                    <div class="cert-entry">Picked up French &amp; Spanish Diplomas at IIT Delhi (2016–2018) along the
-                        way — learning languages, like learning models, never really stops.</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="fold" id="skills">
-            <div class="fold-head" onclick="toggle(this)"><span class="fold-label">Technical Skills</span><span
-                    class="fold-arrow"><svg viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg></span></div>
-            <div class="fold-body">
-                <div class="skills-grid">
-                    <div class="skill-row">
-                        <div class="skill-label">Languages</div>
-                        <div class="skill-values">Python, R, SQL, PySpark</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">ML / DL</div>
-                        <div class="skill-values">TensorFlow, Keras, PyTorch, Scikit-Learn, XGBoost, LightGBM, Pandas,
-                            NumPy</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Cloud & Big Data</div>
-                        <div class="skill-values">AWS (SageMaker, Lambda, S3, EC2), Azure (Databricks, ML Studio),
-                            Hadoop, Spark MLlib</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Medical AI</div>
-                        <div class="skill-values">U-Net, ResNet, Clinical NLP, Survival Analysis, EHR Analytics</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">NLP & Gen AI</div>
-                        <div class="skill-values">Transformers, BERT, GPT, LangChain, RAG</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Clinical Data</div>
-                        <div class="skill-values">SDTM, ADaM, CDISC, Clinical Trial Analytics, Biostatistics Pipelines
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Tools</div>
-                        <div class="skill-values">Docker, Kubernetes, Git, Jenkins, MLflow, Tableau, Power BI</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Databases</div>
-                        <div class="skill-values">PostgreSQL, MySQL, MongoDB</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Regulatory</div>
-                        <div class="skill-values">HIPAA, GDPR, FDA AI/ML Guidance, GxP</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="fold open" id="contact" style="pointer-events:auto">
-            <div class="fold-head" style="cursor:default"><span class="fold-label">Contact</span></div>
-            <div class="fold-body" style="max-height:6000px;opacity:1;padding-bottom:40px">
-                <div class="contact-inner">
-                    <p>If you work in healthcare AI, clinical data science, or pharma R&amp;D — or you're just curious
-                        about any of it — I'd genuinely love to connect and talk.</p>
-                    <div class="contact-row">
-                        <a href="https://vikasai.github.io" target="_blank" class="contact-btn">Home</a>
-                        <a href="mailto:dubeyvikashkr@gmail.com" class="contact-btn">Gmail</a>
-                        <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank"
-                            class="contact-btn">LinkedIn</a>
-                        <a href="https://github.com/VIKASAI" target="_blank" class="contact-btn">GitHub</a>
-                        <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank"
-                            class="contact-btn">ResearchGate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">&copy; 2025 Vikash Kumar Dubey</div>
     </div>
+    <div class="hero-aside">
+        <img class="hero-photo" alt="Vikash Kumar Dubey" src="images/vikash.jpg">
+        <!-- Colorful social badges only -->
+        <div class="hero-badges">
+            <a href="https://mail.google.com/mail/?view=cm&to=dubeyvikashkr@gmail.com" target="_blank" class="badge-email">Email</a>
+            <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank" class="badge-linkedin">LinkedIn</a>
+            <a href="https://github.com/VIKASAI" target="_blank" class="badge-github">GitHub</a>
+            <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank" class="badge-rg">ResearchGate</a>
+        </div>
+    </div>
+</section>
 
-    <script>
-        function toggle(el) { el.parentElement.classList.toggle('open') }
-        function openFold(id, e) { if (e) e.preventDefault(); var f = document.getElementById(id); if (!f) return; if (!f.classList.contains('open')) f.classList.add('open'); setTimeout(function () { f.scrollIntoView({ behavior: 'smooth', block: 'start' }) }, 120); document.querySelector('.nav-menu').classList.remove('open') }
-    </script>
+<!-- EXPERIENCE -->
+<div class="fold" id="experience">
+    <div class="fold-head" onclick="toggle(this)">
+        <span class="fold-label">Experience</span>
+        <span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </div>
+    <div class="fold-body">
+        <div class="role">
+            <div class="role-logo"><a href="https://www.sanofi.com/" target="_blank"><img src="images/sanofi.png" alt="Sanofi"></a></div>
+            <div>
+                <div class="role-org">Sanofi</div>
+                <div class="role-position">Senior AI/ML Modeler Engineer</div>
+                <div class="role-when">May 2025 – Present · Hyderabad, India</div>
+                <p class="role-para">At Sanofi I work deep in the science — building <span class="hi-teal">survival and longitudinal models</span> that track how diseases progress through time, drawing from rich multimodal datasets: cognitive endpoints, <span class="hi-purple">MRI/PET neuroimaging</span>, genomic biomarkers. Every model has to hold up under scrutiny — I evaluate discrimination, calibration, and subgroup robustness before anything reaches a trial team. The pipelines I build follow <span class="hi-amber">CDISC standards (SDTM/ADaM)</span> end-to-end, with automated validation and full regulatory traceability. Working shoulder-to-shoulder with Biostatistics and Clinical Development, I translate messy clinical questions into model specs that are actually useful.</p>
+                <div class="role-core"><b>Core:</b> Survival Analysis, Longitudinal Modeling, SDTM/ADaM, Multimodal Clinical Data, Model Validation</div>
+            </div>
+        </div>
+        <div class="role">
+            <div class="role-logo"><a href="https://www.cognizant.com/" target="_blank"><img src="images/cognizant.png" alt="Cognizant"></a></div>
+            <div>
+                <div class="role-org">Cognizant</div>
+                <div class="role-position">Data Scientist – Healthcare</div>
+                <div class="role-when">Jul 2021 – May 2025 · Hyderabad, India</div>
+                <p class="role-para">Four years at Cognizant meant wearing many hats across pharma and life sciences. I built <span class="hi-teal">patient stratification and trial recruitment models</span> using XGBoost and LightGBM — always with bias checks across diverse cohorts. The infrastructure side was just as important: end-to-end <span class="hi-purple">ML pipelines on AWS and Azure</span>, from raw ingestion through to serving, running across multiple concurrent projects. I brought <span class="hi-green">generative AI into clinical workflows</span> — document automation, diagnostic support — and set up the MLOps scaffolding (versioning, monitoring, retraining) to keep it reliable. The Tableau and Power BI dashboards I delivered became daily tools for clinical and ops teams tracking enrollment in real time.</p>
+                <div class="role-core"><b>Core:</b> Ensemble Modeling, Cloud ML Pipelines, Clinical Data Quality, Dashboard Analytics, MLOps</div>
+            </div>
+        </div>
+        <div class="role">
+            <div class="role-logo"><a href="https://www.ilbs.in/" target="_blank"><img src="images/ilbs.png" alt="ILBS"></a></div>
+            <div>
+                <div class="role-org">Institute of Liver &amp; Biliary Sciences</div>
+                <div class="role-position">Data Scientist – Medical AI Research</div>
+                <div class="role-when">Dec 2020 – Jul 2021 · Delhi, India</div>
+                <p class="role-para">This was the role that turned me into a medical AI researcher. Working with clinicians at ILBS, I built <span class="hi-rose">sepsis risk prediction models</span> for ACLF patients — XGBoost and Random Forest with careful threshold tuning, so that model outputs actually mapped to clinical decisions (published APASL 2023). On the imaging side, I implemented <span class="hi-teal">U-Net and CNN models</span> for brain tumor segmentation from MRI, validated against radiologist-annotated ground truth using dice coefficient and cross-fold validation (IEEE ICAII 2023). Working directly with clinicians forced me to care about clinical meaning, not just statistical metrics.</p>
+                <div class="role-core"><b>Core:</b> Clinical Model Validation, Medical Imaging, Clinician Collaboration, Research Publishing</div>
+            </div>
+        </div>
+        <div class="role">
+            <div class="role-logo"><a href="https://centylebiotech.com/" target="_blank"><img src="images/centyle.png" alt="Centyle Biotech"></a></div>
+            <div>
+                <div class="role-org">Centyle Biotech Pvt. Ltd</div>
+                <div class="role-position">Data Scientist – Bioinformatics</div>
+                <div class="role-when">Feb 2019 – Dec 2020 · Delhi, India</div>
+                <p class="role-para">My entry into ML was through biology. At Centyle Biotech, I built pipelines to make sense of complex <span class="hi-green">genomic and proteomic datasets</span> — clustering, dimensionality reduction, classification — working in Python and R. I collaborated closely with domain scientists to define features and validation workflows that captured actual biological variability, not just data artifacts. It taught me to iterate carefully and document rigorously before anything touched production.</p>
+                <div class="role-core"><b>Core:</b> Bioinformatics, Unsupervised/Supervised Learning, Genomic Data, Model Iteration</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="fold" id="projects">
+    <div class="fold-head" onclick="toggle(this)">
+        <span class="fold-label">Projects</span>
+        <span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </div>
+    <div class="fold-body">
+        <div class="project">
+            <div class="project-head"><span class="project-name">Disease Progression Modeling System</span><span class="project-year">2025</span></div>
+            <p class="project-para">A system that forecasts how a patient's disease will evolve — combining <span class="hi-teal">Cox &amp; Kaplan-Meier survival analysis</span>, linear mixed-effects models, gradient boosting, and deep learning over multimodal clinical data (EHR records, imaging, genomic markers). Feature engineering was critical: I built biomarker identification pipelines using <span class="hi-green">Random Forest and XGBoost with SHAP</span> to make sure the right signals drove the predictions. Interpretability layers, subgroup validation, and decision threshold tuning made outputs that clinicians could actually trust. Experiment tracking via <span class="hi-amber">MLflow</span> kept everything reproducible across dozens of data refreshes.</p>
+        </div>
+        <div class="project">
+            <div class="project-head"><span class="project-name">Generative AI for Drug Discovery</span><span class="project-year">2024</span></div>
+            <p class="project-para">What if a researcher could just <em>ask</em> the literature a question and get a cited, synthesized answer? A <span class="hi-green">RAG-based retrieval system</span> over large biomedical corpora — using vector embeddings and semantic search to retrieve the most relevant passages, then synthesizing answers via LLM. Paired with <span class="hi-rose">NLP pipelines for drug-target interaction extraction</span> using fine-tuned transformer models. Retrieval quality measured with precision@k and MRR. Result: researchers spending far less time on manual literature review.</p>
+        </div>
+        <div class="project">
+            <div class="project-head"><span class="project-name">Clinical Trial Analytics Platform</span><span class="project-year">2022</span></div>
+            <p class="project-para">Built the data engine behind a clinical trial: an end-to-end <span class="hi-teal">patient screening pipeline</span> for Phase II/III studies, fusing EHR, lab, and imaging features with automated feature selection (Lasso, mutual information), <span class="hi-purple">machine learning classifiers</span>, and calibration analysis to improve cohort matching. On top of that, Tableau dashboards giving trial teams <span class="hi-amber">live visibility</span> into enrollment rates, cohort drift, and site performance — replacing the weekly manual reporting grind entirely.</p>
+        </div>
+        <div class="project">
+            <div class="project-head"><span class="project-name">Medical Imaging Diagnostics</span><span class="project-year">2021</span></div>
+            <p class="project-para"><span class="hi-purple">U-Net and ResNet</span> <span class="hi-teal">deep learning models</span> trained to detect brain tumors and hemorrhagic strokes from MRI/CT scans — validated against radiologist-annotated ground truth using dice coefficient, IoU, and cross-fold validation. Confidence scoring added so radiologists could see exactly how certain the model was at each prediction. The full inference pipeline containerized with Docker and integrated into a real clinical workflow for live diagnostic support.</p>
+        </div>
+    </div>
+</div>
+
+<!-- PUBLICATIONS -->
+<div class="fold" id="publications">
+    <div class="fold-head" onclick="toggle(this)">
+        <span class="fold-label">Research &amp; Publications</span>
+        <span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </div>
+    <div class="fold-body">
+        <div class="pub"><span class="pub-idx">1</span>
+            <div>
+                <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank">Advanced MRI Segmentation Algorithm for Brain Tumor Detection</a></div>
+                <div class="pub-venue">IEEE ICAII 2023, July 2023</div>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-37303-9_14" target="_blank" class="pub-link">View Paper →</a>
+            </div>
+        </div>
+        <div class="pub"><span class="pub-idx">2</span>
+            <div>
+                <div class="pub-title"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf" target="_blank">Prediction of Sepsis in ACLF Patients – A Machine Learning Approach</a></div>
+                <div class="pub-venue">APASL ACLF Research Consortium, June 2023</div>
+                <a href="https://www.journal-of-hepatology.eu/article/S0168-8278(23)00726-2/pdf" target="_blank" class="pub-link">View Paper →</a>
+            </div>
+        </div>
+        <div class="pub"><span class="pub-idx">3</span>
+            <div>
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9781835" target="_blank">Brain Hemorrhagic Stroke Detection by Image Processing</a></div>
+                <div class="pub-venue">IEEE ICEECCOT 2022, March 2022</div>
+                <a href="https://ieeexplore.ieee.org/document/9781835" target="_blank" class="pub-link">View Paper →</a>
+            </div>
+        </div>
+        <div class="pub"><span class="pub-idx">4</span>
+            <div>
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank">News Classification from Microblogging Dataset using Supervised Learning</a></div>
+                <div class="pub-venue">IEEE ICCCIS 2021, February 2021</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9397074" target="_blank" class="pub-link">View Paper →</a>
+            </div>
+        </div>
+        <div class="pub"><span class="pub-idx">5</span>
+            <div>
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9114793/" target="_blank">Comparative Analysis of Various Extreme Multi-Label Classification Algorithms</a></div>
+                <div class="pub-venue">IEEE ICEECCOT 2019, December 2019</div>
+                <a href="https://ieeexplore.ieee.org/document/9114793/" target="_blank" class="pub-link">View Paper →</a>
+            </div>
+        </div>
+        <div class="pub"><span class="pub-idx">6</span>
+            <div>
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8975632" target="_blank">A Review of Omega-Based Portfolio Optimization</a></div>
+                <div class="pub-venue">IEEE ICPECA 2019, November 2019</div>
+                <a href="https://ieeexplore.ieee.org/document/8975632" target="_blank" class="pub-link">View Paper →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="fold" id="education">
+    <div class="fold-head" onclick="toggle(this)">
+        <span class="fold-label">Education &amp; Certifications</span>
+        <span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </div>
+    <div class="fold-body">
+        <div class="edu">
+            <div class="edu-icon"><a href="https://www.sau.int/" target="_blank"><img src="images/sau.png" alt="South Asian University"></a></div>
+            <div>
+                <div class="edu-name">South Asian University (SAARC)</div>
+                <div class="edu-degree">Master of Science in Computer Science</div>
+                <div class="edu-when">Jul 2016 – Jun 2018 · Delhi, India</div>
+                <div class="edu-body">
+                    <p style="margin-bottom:6px"><strong>Thesis:</strong> Multi-label text classification using deep learning and extreme classification techniques for large-scale datasets. <a href="https://drive.google.com/file/d/1rzC6EmTkORh6ussemYQ9D55BcYQUkWAr/view?usp=drivesdk" target="_blank">[View Thesis]</a></p>
+                    <p><strong>Coursework:</strong> Machine Learning, Deep Learning, NLP, Statistical Inference, Data Structures &amp; Algorithms, Computer Vision, Big Data Systems, Cloud Computing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="certs-divider">
+            <div class="certs-title">Beyond the Work</div>
+            <div class="cert-entry">Taught ML, Deep Learning, NLP &amp; Cloud to <strong>1,000+ learners</strong> as a Data Science Instructor &amp; Consultant (2018–2020), and ran hands-on AI workshops at IIT Kanpur. <a href="https://drive.google.com/file/d/1PMIyYPeJv7G5ObBzHfYJvzAYd24qp2v-/view?usp=drive_link" target="_blank" style="font-size:12px">[Certificate]</a></div>
+            <div class="cert-entry">Presented research at <strong>6 IEEE &amp; APASL conferences</strong> and served as ACM Vice Chair &amp; University Ambassador — running healthcare AI knowledge-sharing workshops at Cognizant and Sanofi.</div>
+            <div class="cert-entry">Picked up French &amp; Spanish Diplomas at IIT Delhi (2016–2018) along the way — learning languages, like learning models, never really stops.</div>
+        </div>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div class="fold" id="skills">
+    <div class="fold-head" onclick="toggle(this)">
+        <span class="fold-label">Technical Skills</span>
+        <span class="fold-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </div>
+    <div class="fold-body">
+        <table class="skills-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Technologies &amp; Tools</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="skill-row-languages">
+                    <td>Languages</td>
+                    <td>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PySpark</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-mldl">
+                    <td>ML / DL</td>
+                    <td>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">LightGBM</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-cloud">
+                    <td>Cloud &amp; Big Data</td>
+                    <td>
+                        <span class="skill-tag">AWS SageMaker</span>
+                        <span class="skill-tag">AWS Lambda</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">Azure Databricks</span>
+                        <span class="skill-tag">Azure ML Studio</span>
+                        <span class="skill-tag">Hadoop</span>
+                        <span class="skill-tag">Spark MLlib</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-medai">
+                    <td>Medical AI</td>
+                    <td>
+                        <span class="skill-tag">U-Net</span>
+                        <span class="skill-tag">ResNet</span>
+                        <span class="skill-tag">Clinical NLP</span>
+                        <span class="skill-tag">Survival Analysis</span>
+                        <span class="skill-tag">EHR Analytics</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-nlp">
+                    <td>NLP &amp; Gen AI</td>
+                    <td>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">BERT</span>
+                        <span class="skill-tag">GPT</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">RAG</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-clinical">
+                    <td>Clinical Data</td>
+                    <td>
+                        <span class="skill-tag">SDTM</span>
+                        <span class="skill-tag">ADaM</span>
+                        <span class="skill-tag">CDISC</span>
+                        <span class="skill-tag">Clinical Trial Analytics</span>
+                        <span class="skill-tag">Biostatistics Pipelines</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-tools">
+                    <td>Tools</td>
+                    <td>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-databases">
+                    <td>Databases</td>
+                    <td>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </td>
+                </tr>
+                <tr class="skill-row-regulatory">
+                    <td>Regulatory</td>
+                    <td>
+                        <span class="skill-tag">HIPAA</span>
+                        <span class="skill-tag">GDPR</span>
+                        <span class="skill-tag">FDA AI/ML Guidance</span>
+                        <span class="skill-tag">GxP</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="fold open" id="contact">
+    <div class="fold-head" style="cursor:default">
+        <span class="fold-label">Contact</span>
+    </div>
+    <div class="fold-body" style="max-height:6000px;opacity:1;padding-bottom:48px">
+        <div class="contact-inner">
+            <p>If you work in healthcare AI, clinical data science, or pharma R&amp;D — or you're just curious about any of it — I'd genuinely love to connect.</p>
+            <div class="contact-row">
+                <a href="https://vikasai.github.io" target="_blank" class="contact-btn btn-home">Home</a>
+                <a href="https://mail.google.com/mail/?view=cm&to=dubeyvikashkr@gmail.com" target="_blank" class="contact-btn btn-gmail">Gmail</a>
+                <a href="https://www.linkedin.com/in/vikashealthai/" target="_blank" class="contact-btn btn-linkedin">LinkedIn</a>
+                <a href="https://github.com/VIKASAI" target="_blank" class="contact-btn btn-github">GitHub</a>
+                <a href="https://www.researchgate.net/profile/Vikash-Dubey-3" target="_blank" class="contact-btn btn-rg">ResearchGate</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">&copy; 2025 Vikash Kumar Dubey</div>
+```
+
+</div>
+
+<script>
+    function toggle(el) { el.parentElement.classList.toggle('open') }
+
+    function openFold(id, e) {
+        if (e) e.preventDefault();
+        var f = document.getElementById(id);
+        if (!f) return;
+        if (!f.classList.contains('open')) f.classList.add('open');
+        setTimeout(function () { f.scrollIntoView({ behavior: 'smooth', block: 'start' }) }, 80);
+        document.getElementById('navMenu').classList.remove('open');
+        document.getElementById('navToggle').classList.remove('active');
+    }
+
+    document.getElementById('navToggle').addEventListener('click', function () {
+        this.classList.toggle('active');
+        document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    document.addEventListener('click', function (e) {
+        var menu = document.getElementById('navMenu');
+        var toggle = document.getElementById('navToggle');
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+            menu.classList.remove('open');
+            toggle.classList.remove('active');
+        }
+    });
+</script>
+
 </body>
 
 </html>
